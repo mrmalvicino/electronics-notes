@@ -1,0 +1,425 @@
+\chapter{Circuitos AC}
+
+\section{CIVIL}
+
+En un resistor no hay defasaje para los fasores de su tensión y corriente, pero para un capacitor y un inductor se tiene, respectivamente:
+\begin{gather*}
+    C: \left\{
+    \begin{aligned}
+        \phi_{\voltage_C} &= \phi_{\current_C} - \ang{90}
+        \\
+        \phi_{\current_C} &= \phi_{\voltage_C} + \ang{90}
+    \end{aligned}
+    \right.
+    \\[1em]
+    L: \left\{
+    \begin{aligned}
+        \phi_{\voltage_L} &= \phi_{\current_L} + \ang{90}
+        \\
+        \phi_{\current_L} &= \phi_{\voltage_L} - \ang{90}
+    \end{aligned}
+    \right.
+\end{gather*}
+
+A continuación vemos esta variación de la tensión y la corriente en el tiempo, representada con fasores complejos.
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/ac-fase.pdf_tex}
+\end{center}
+
+Una interpretación intuitiva del comportamiento de un capacitor se representa con un tanque de agua con capacidad para almacenar volumen de agua, que tiene una válvula que puede suministrar un flujo de agua.
+
+\begin{center}
+    \def\svgwidth{0.9\linewidth}
+    \input{./images/ac-capacitor-tanque.pdf_tex}
+\end{center}
+
+Graficando las etapas de carga y descarga, si se toma un intervalo de tiempo infinitesimal, las gráficas discretas aproximan a funciones senoidales:
+
+\begin{center}
+    \def\svgwidth{0.8\linewidth}
+    \input{./images/ac-capacitor-fase.pdf_tex}
+\end{center}
+
+La analogía infiere que, si la corriente es el flujo de agua que entra o sale, y la tensión es el volumen de agua que se acumula, entonces la corriente es la tasa de cambio de la tensión:
+\begin{equation*}
+    \current_C(t) = C \, \frac{\dif}{\dif t} \voltage_C(t)
+\end{equation*}
+
+Mientras que para un inductor se tiene:
+\begin{equation*}
+    \voltage_L(t) = L \, \frac{\dif}{\dif t} \current_L(t)
+\end{equation*}
+
+
+\section{Impedancia}
+
+Se llaman reactancia capacitiva ($X_C$) y reactancia inductiva ($X_L$) a las magnitudes que representan la oposición al paso de corriente impuesta por los capacitores e inductores respectivamente.
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \cusTi{Reactancia capacitiva}
+    \begin{equation*}
+        X_C = \frac{1}{\omega \, C} = \frac{1}{2 \, \pi \, f \, C}
+    \end{equation*}
+\end{mdframed}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \cusTi{Reactancia inductiva}
+    \begin{equation*}
+        X_L = \omega \, L = 2 \, \pi \, f \, L
+    \end{equation*}
+\end{mdframed}
+
+La impedancia ($\impedance$) engloba la resistencia ($R$), la reactancia capacitiva ($X_C$), y la reactancia inductiva ($X_L$).
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \cusTi{Impedancia}
+    \begin{equation*}
+        \impedance = R + \iu \inParentheses{X_L - X_C}
+    \end{equation*}
+\end{mdframed}
+
+De manera que la Ley de Ohm se sigue cumpliendo, teniendo en cuenta que la impedancia es una división entre fasores complejos.
+\begin{equation*}
+    \impedance = \frac{\voltage}{\current}
+    = \frac{V \, e^{\iu \inParentheses{\omega \, t + \phi_\voltage}}}{I \, e^{\iu \inParentheses{\omega \, t + \phi_\current}}}
+    = \frac{V}{I} \, e^{\iu \inParentheses{\phi_\voltage - \phi_\current}}
+    = \frac{V}{I} \, e^{\iu \, \phi_\impedance}
+    = Z \, e^{\iu \, \phi_\impedance}
+\end{equation*}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    Para un componente púramente resistivo se tiene que $\phi_{\voltage_R} - \phi_{\current_R} = \phi_{\impedance_R} = 0$ tal que
+    \begin{equation*}
+        \impedance_R = \frac{V_R}{I_R} \, e^0 = R
+    \end{equation*}
+\end{mdframed}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    Para un componente púramente capactivo se tiene que $\phi_{\voltage_C} - \phi_{\current_C} = \phi_{\impedance_C} = - \ang{90}$ tal que
+    \begin{equation*}
+        \impedance_C = \frac{V_C}{I_C} \, e^{- \iu \, \frac{\pi}{2}} = - \iu \, X_C
+    \end{equation*}
+\end{mdframed}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    Para un componente púramente inductivo se tiene que $\phi_{\voltage_L} - \phi_{\current_L} = \phi_{\impedance_L} = \ang{90}$ tal que
+    \begin{equation*}
+        \impedance_L = \frac{V_L}{I_L} \, e^{\iu \, \frac{\pi}{2}} = \iu \, X_L
+    \end{equation*}
+\end{mdframed}
+
+
+\section{Circuitos R-C en serie}
+
+\begin{equation*}
+    \sub{\impedance}{eq} = \impedance_R + \impedance_C
+\end{equation*}
+
+Donde:
+\begin{align*}
+    \sub{Z}{eq} &= \sqrt{R^2 + X_C^2}
+    \\
+    \phi_{\sub{\impedance}{eq}} &= \arctan{\inParentheses{\dfrac{-X_C}{R}}}
+\end{align*}
+
+\begin{align*}
+    \current &= \frac{\voltage_s}{\sub{\impedance}{eq}}
+    \\
+    &= \frac{V_s}{\sub{Z}{eq}} \, e^{\iu \inParentheses{\ang{0} - \phi_{\sub{\impedance}{eq}}}}
+\end{align*}
+
+Donde:
+\begin{align*}
+    I &= \frac{V_s}{\sub{Z}{eq}}
+    \\
+    \phi_i &= - \phi_{\sub{Z}{eq}}
+\end{align*}
+
+\begin{align*}
+    \voltage_C &= \current \, \impedance_C
+    \\
+    &= \frac{V_s \, X_C}{\sub{Z}{eq}} \, e^{\iu \phi_{\voltage_C}}
+\end{align*}
+
+Donde:
+\begin{align*}
+    V_C &= \frac{V_s \, X_C}{\sqrt{R^2 + X_C^2}}
+    \\
+    \phi_{\voltage_C} &= \phi_\current + \phi_{\impedance_C} = - \arctan{\inParentheses{\dfrac{-X_C}{R} }} - \ang{90}
+\end{align*}
+
+
+\section{Potencia}
+
+La potencia en AC es similar a la definida para DC.
+La diferencia es que en alterna, la tensión y la corriente son funciones del tiempo.
+De manera que la potencia también lo es.
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \cusTi{Potencia en AC}
+    \begin{equation*}
+        \fx{p}{t} = \fx{\current}{t} \, \fx{\voltage}{t}
+    \end{equation*}
+\end{mdframed}
+
+La tensión y la corriente son ondas senoidales de igual frecuencia, pero que pueden estár defasadas entre sí.
+Sea $\varphi$ el defasaje entre $\fx{\current}{t}$ y $\fx{\voltage}{t}$ podemos expresar la potencia como
+\begin{align*}
+    \fx{p}{t} &= I \, \sin (\omega \, t) \, V \, \sin (\omega \, t + \varphi)
+    \\[1ex]
+    &= V \, I \, \cos (\varphi) \inBrackets{1 - \cos(2 \, \omega \, t)} + V \, I \, \sin (\varphi) \sin (2 \, \omega \, t)
+\end{align*}
+
+
+\section{Filtros}
+
+Al aumentar la frecuencia de la corriente en un circuito R-C, el capacitor tiene menos tiempo de cargado por ciclo.
+Por más que la intensidad de corriente máxima sea la misma, la tensión máxima va a ser menor.
+
+Un filtro es un divisor de tensión que tiene una rama \emph{en serie} y otra \emph{en paralelo} o \emph{en derivación}.
+En cada rama puede tener uno o más componentes, que pueden ser resistores, capacitores o inductores dependiendo la aplicación:
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/filter.pdf_tex}
+\end{center}
+
+La frecuencia de corte o frecuencia de cruce $f_c$ es el aquella para la que ambas ramas tienen igual impedancia.
+
+El siguiente gráfico muestra las curvas de impedancia de un resistor $(R)$, un capacitor $(C)$ y una bobina $(L)$ para diferentes frecuencias:
+
+\begin{center}
+    \def\svgwidth{0.7\linewidth}
+    \input{./images/filter-fc.pdf_tex}
+\end{center}
+
+
+\subsection{Filtros R-C}
+
+El siguiente es un filtro R-C pasa altos.
+Invirtiendo la disposición de los componentes, se tiene un filtro R-C pasa bajos.
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/filter-rc.pdf_tex}
+\end{center}
+
+La frecuencia central es aquella que verifica $R = X_C$ y está dada por:
+\begin{equation*}
+    f_c = \frac{1}{2 \, \pi \, C \, R}
+\end{equation*}
+
+
+\subsection{Función de transferencia}
+
+La función de transferencia es
+\begin{equation*}
+    H = \frac{\sub{\voltage}{out}}{\sub{\voltage}{in}}
+    = \frac{\iu \, R}{\iu \, \sub{Z}{eq}}
+    = \frac{R}{R - \iu \, X_C}
+\end{equation*}
+
+o bien
+\begin{equation*}
+    H = \frac{1}{1 - \iu \, \tfrac{1}{\omega \, R \, C}}
+\end{equation*}
+
+La frecuencia de resonancia verifica $Z_R = Z_C$ o bien $R = \frac{1}{\omega_0 \, C}$, quedando la frecuencia de cruce
+\begin{equation*}
+    \omega_0 = \frac{1}{R \, C}
+\end{equation*}
+
+Y la función de transferencia
+\begin{equation*}
+    H = \frac{1}{1 - \iu \, \tfrac{\omega_0}{\omega}} = \frac{1}{\sqrt{1 +  \inParentheses{\tfrac{\omega_0}{\omega}}^2}} \, e^{\iu \artan \inParentheses{\tfrac{\omega_0}{\omega}}}
+\end{equation*}
+
+De manera que si $\omega = \omega_0$ el circuito está en resonancia y
+\begin{equation*}
+    \norm{H} = \frac{1}{\sqrt{2}} = \frac{\sub{V}{out}}{\sub{V}{in}} \approx 0.707
+\end{equation*}
+
+Que en decibeles es
+\begin{align*}
+    L_H &= 20 \, \log \inParentheses{\frac{\sub{V}{out}}{\sub{V}{in}}}
+    \\[1ex]
+    &= -20 \, \log \sqrt{1 + \inParentheses{\frac{\omega_0}{\omega}}^2}
+    \\[1ex]
+    &= -10 \, \log \inBrackets{1 + \inParentheses{\frac{\omega_0}{\omega}}^2}
+\end{align*}
+
+Ahora bien, es posible hacer una aproximación que tenga una caída de $6 \, \si{\deci \bel}$ por octava, sabiendo que la atenuación real en la frecuencia de resonancia va a ser de $3 \, \si{\deci \bel}$.
+
+Esto es, considerando $f << f_0$ se tiene que $1 << \inParentheses{\tfrac{\omega_0}{\omega}}^2$ y se obtendría para la función de transferencia
+\begin{equation*}
+    L_H \approx 20 \, \log \inParentheses{\frac{\omega}{\omega_0}}
+\end{equation*}
+
+Pudiendo comparar ambas respuestas en frecuencia en el siguiente gráfico
+
+\begin{center}
+    \def\svgwidth{\linewidth}
+    \input{./images/filtros-func-transfer.pdf_tex}
+\end{center}
+
+
+\subsection{Filtros R-L}
+
+El siguiente es un filtro R-L pasa bajos.
+Invirtiendo la disposición de los componentes, se tiene un filtro R-L pasa altos.
+\begin{equation*}
+    R = X_L \Rightarrow f_c = \frac{R}{2 \, \pi \, L}
+\end{equation*}
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/filter-rl.pdf_tex}
+\end{center}
+
+
+\subsection{Filtros L-C}
+
+El siguiente es un filtro L-C pasa bajos.
+Invirtiendo la disposición de los componentes, se tiene un filtro L-C pasa altos.
+\begin{equation*}
+    X_C = X_L \Rightarrow f_c = \dfrac{1}{2 \, \pi \, \sqrt{L \, C}}
+\end{equation*}
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/filter-lc.pdf_tex}
+\end{center}
+
+
+\subsection{Filtro pasa banda}
+
+El siguiente es un filtro pasa banda.
+Invirtiendo la disposición de los componentes, se tiene un filtro rechaza banda.
+\begin{align*}
+    \norm{\impedance_R} &= \norm{\impedance_C + \impedance_L}
+    \\
+    R &= \norm{\iu \, \omega \, L - \iu \, \frac{1}{\omega \, C}}
+    \\
+    &= \omega \, L - \frac{1}{\omega \, C}
+    \\
+    &= 2 \, \pi \, f_c \, L - \frac{1}{2 \, \pi \, f_c \, C}
+\end{align*}
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/filter-rlc.pdf_tex}
+\end{center}
+
+La pendiente es proporcional a la resistencia:
+\begin{equation*}
+    Q = \frac{f_c}{\Delta f} \propto R
+\end{equation*}
+
+
+\section{Transformadores}
+
+El transformador sirve para aumentar o disminuir la tensión y la corriente de una fuente AC.
+
+Está formado por dos bobinas, a lo largo de las cuales hay un material que permite el flujo magnético.
+Cuando circula corriente por una de las bobinas, se genera un campo magnético que es detectado por la segunda bobina, y genera un campo independiente del anterior.
+Este va a generar una corriente análoga a la de entrada, pero cuya tensión $(V)$ e intensidad $(I)$ va a depender de la cantidad de vueltas que ambas bobinas tengan.
+
+\begin{center}
+    \def\svgwidth{\linewidth}
+    \input{./images/transformador.pdf_tex}
+\end{center}
+
+La función del transformador es, como se mencionó anteriormente, modificar la tensión, lo cual va a afectar la corriente.
+Por la ley del transformador ideal, lo que permanece constante es la potencia:
+\begin{equation*}
+    V_0 \, I_0 = V_1 \, I_1
+\end{equation*}
+
+\begin{mdframed}[style=MyFrame2]
+    \begin{example}
+    \end{example}
+    \cusTi{Lámpara EUR-USA}
+    \begin{formatI}
+        Con frecuencia se suelen usar transformadores para conectar un dispositivo que esté diseñado para ser usado con la tensión que se usa en el país de procedencia del dispositivo.
+        En Argentina y Europa en general, se utiliza $\SI{220}{\volt}$ y en Estados Unidos $\SI{110}{\volt}$.
+        Verificar que una lámpara de $\SI{55}{\watt}$ de Argentina no va a ser igual que una lámpara de $\SI{55}{\watt}$ de Estados unidos, pero ambas van alumbrar con la misma potencia.
+    \end{formatI}
+    
+    Planteando $P = V \, I$ para cada país, se tiene:
+    \begin{align*}
+        \SI{55}{\watt} = \SI{220}{\volt} \times \sub{I}{Arg} & \Rightarrow \sub{I}{Arg} = \SI{0.25}{\ampere}
+        \\
+        \SI{55}{\watt} = \SI{110}{\volt} \, \sub{I}{USA} & \Rightarrow \sub{I}{USA} = \SI{0.5}{\ampere}
+    \end{align*}
+    
+    En conclusión, la lámpara de $55 watts$ argentina va a proporcionar una resistencia de $880\Omega$ mientras que la de Estados Unidos $220\Omega$.
+    \begin{equation*}
+        \sub{R}{Arg} = \SI{880}{\ohm} \neq \sub{R}{USA} = \SI{220}{\ohm}
+    \end{equation*}
+    
+    Es decir, que si se conecta una lámpara argentina en la red de Estados Unidos va a alumbrar menos que si se conecta en Argentina, y si se conecta una lámpara de Estados Unidos en Argentina sin transformador se quema.
+\end{mdframed}
+
+
+\section{Fuente AC/DC}
+
+Supongamos que se tiene un tanque al que, con una frecuencia constante, por momentos se le agrega agua y por momentos se le quita.
+A partir de esa situación, se quiere instalar una canilla por la que salga una corriente de agua constante.
+En principio se necesita que el llenado de agua solo sea entrante, evitando que se descargue.
+Y además, se necesita que haya cierta acumulación de agua en el tanque para que, si abro la canilla más de lo que la entrada está aportando, no baje la presión de manera sustancial.
+Para convertir una fuente de AC en DC, el procedimiento es similar a la analogía anterior.
+
+\begin{itemize}
+    \item \textbf{Fuente AC:} suministra de elergía eléctrica el dispositivo.
+    \item \textbf{Transformador:} adapta la tensión que entrega la red.
+    En el caso de argentina la entrada del transformador sería de $\SI{220}{\volt}$ y la salida depende del equipo en cuestión.
+    \item \textbf{Etapa de rectificación:} hace que la corriente tenga solo un sentido.
+    Suelen usarse diodos.
+    \item \textbf{Etapa de filtrado:} obtiene una acumulación de cargas para que las cargas que salgan no superen a las que entren cortando el flujo de corriente.
+    Suelen usarse capacitores.
+    \item \textbf{Resistencia:} carga equivalente al dispositivo que estamos conectando a la fuente.
+\end{itemize}
+
+\begin{center}
+    \def\svgwidth{\linewidth}
+    \input{./images/fuente-simple.pdf_tex}
+\end{center}
+
+\concept{Puente de diodos}
+
+Para hacer la etapa de rectificación más eficiente, se necesitaría aprovechar cuando la corriente cambia de sentido.
+Es decir, en vez de solo dejar pasar la corriente cuando es positiva, de alguna forma ``cambiar los extremos de los cables'' cuando la fuente alterna cambie de polaridad de manera que la polaridad resultante siempre sea la misma.
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/puente-de-diodos-1.pdf_tex}
+\end{center}
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/puente-de-diodos-2.pdf_tex}
+\end{center}
+
+Claro está que realizar este cambio manualmente es imposible.
+Pero la siguiente configuración, llamada Puente de Diodos cumple la función de hacer la corriente siempre positiva.
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/puente-de-diodos-3.pdf_tex}
+\end{center}

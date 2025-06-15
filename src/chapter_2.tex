@@ -1,0 +1,450 @@
+\chapter{Circuitos DC}
+
+\renewcommand{\voltage}{V}
+\renewcommand{\current}{I}
+
+\section{Corriente}
+
+Alessandro Volta inventó la pila de corriente continua colocando un electrolito entre dos metales con diferente potencial de extracción.
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \cusTi{Corriente}
+    \cusTe{La intensidad de corriente es la cantidad de cargas por segundo que pasa por un punto en un circuito.}
+    \begin{equation*}
+        I = \frac{q}{\Delta t}
+    \end{equation*}
+\end{mdframed}
+
+
+\section{Ley de Ohm}
+
+Los conductores ideales no oponen resistencia alguna al flujo de corriente.
+Los buenos conductores practicamente no se oponen al paso de corriente, como el oro o el cobre.
+Los malos conductores hacen que el flujo de corriente sea lento.
+
+Cuanto más largo sea un mal conductor, más resistencia opondrá al paso de corriente.
+Cuanto más ancho sea, las cargas tendrán más lugar para fluir:
+
+\begin{equation*}
+    \text{Resistencia} \equiv \frac{\text{Resistividad} \times \text{Distancia}}{\text{Area}}
+\end{equation*}
+
+Georg Simon Ohm demostró experimentalmente la proporción con la que, para distintos tipos de conductores, una misma tensión genera distintos flujos de corriente.
+Pero indistintamente del material y topología del conductor, para cada uno se verifica que la relación entre diferentes tensiones con las respectivas corrientes que se generan es constante:
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \cusTi{Ley de Ohm}
+    \cusTe{La tensión es directamente proporcional a la corriente, siendo $R$ el factor de proporcionalidad.}
+    \begin{equation*}
+        R = \frac{V}{I}
+    \end{equation*}
+\end{mdframed}
+
+
+\section{Leyes de Kirchhoff}
+
+\begin{itemize}
+\item La ley de Kirchhoff de la Corriente dice que para cada nodo, la suma de las corrientes es nula, considerando la corriente entrante como positiva y saliente como negativa.
+
+\item La Ley de Kirchhoff de la Tensión dice que para cada malla, si esta se recorre en sentido horario la suma de las tensiones de los componentes que se encuentren es nula.
+\end{itemize}
+
+
+\section{Serie y paralelo}
+
+
+\subsection{Capacitores en paralelo}
+
+\begin{gather*}
+    \left\{
+    \begin{aligned}
+        V &= \norm{V_1} = \norm{V_2}
+        \\
+        q &= q_1 + q_2
+    \end{aligned}
+    \right.
+    \\[1ex]
+    \sub{C}{eq} = \frac{q}{V} = \frac{q_1 + q_2}{V} = \frac{q_1}{V} + \frac{q_2}{V}
+\end{gather*}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    \cusTi{Capacitores en paralelo}
+    \begin{equation*}
+        \sub{C}{eq} = \sum_{\ith=1}^\nth C_\ith
+    \end{equation*}
+\end{mdframed}
+
+
+\subsection{Capacitores en serie}
+
+\begin{gather*}
+    \left\{
+    \begin{aligned}
+        V &= \norm{V_1} + \norm{V_2}
+        \\
+        q &= q_1 = q_2
+    \end{aligned}
+    \right.
+    \\[1ex]
+    \sub{C}{eq} = \frac{q}{V} = \frac{q}{V_1 + V_2}
+\end{gather*}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    \cusTi{Capacitores en serie}
+    \begin{equation*}
+        \frac{1}{\sub{C}{eq}} = \sum_{\ith=1}^\nth \frac{1}{C_\ith}
+    \end{equation*}
+\end{mdframed}
+
+
+\subsection{Resistencias en serie}
+
+\begin{gather*}
+    \left\{
+    \begin{aligned}
+        V &= \norm{V_1} + \norm{V_2}
+        \\
+        q &= q_1 = q_2
+    \end{aligned}
+    \right.
+    \\[1ex]
+    \sub{R}{eq} = \frac{V \, \Delta t}{q} = \frac{\inParentheses{V_1 + V_2} \Delta t}{q} = \frac{\inParentheses{I \, R_1 + I \, R_2}}{I} = R_1 + R_2
+\end{gather*}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    \cusTi{Resistencias en serie}
+    \begin{equation*}
+        \sub{R}{eq} = \sum_{\ith=1}^\nth R_\ith
+    \end{equation*}
+\end{mdframed}
+
+
+\subsection{Resistencias en paralelo}
+
+\begin{gather*}
+    \left\{
+    \begin{aligned}
+        V &= \norm{V_1} = \norm{V_2}
+        \\
+        q &= q_1 + q_2
+    \end{aligned}
+    \right.
+    \\[1ex]
+    \sub{R}{eq} = \frac{V \, \Delta t}{q}
+    = \frac{V \, \Delta t}{q_1 + q_2}
+    = \frac{V}{I_1 + I_2} = \frac{V}{\dfrac{V}{R_1} + \dfrac{V}{R_2}}
+    = \frac{1}{\dfrac{1}{R_1}+\dfrac{1}{R_2}}
+\end{gather*}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    \cusTi{Resistencias en paralelo}
+    \begin{equation*}
+        \frac{1}{\sub{R}{eq}} = \sum_{\ith=1}^\nth \frac{1}{R_\ith}
+    \end{equation*}
+\end{mdframed}
+
+
+\section{Fuente ideal y fuente real}
+
+Las fuentes reales generan una tensión, pero al conectarlas con una resistencia de carga, varian la tensión que generarian de no tener carga.
+
+
+\subsection{Modelo de fuente de tensión real}
+
+Para simular el efecto de disminución del potencial que generaría conectar un resistor de carga $(R_L)$ a una fuente ideal $(V_F)$, se puede incluir un resistor en serie, llamado resistencia de fuente $(R_S)$.
+El modelo de fuente real $(V_S)$ es el conjunto de la fuente ideal y la resistencia de fuente.
+
+La resistencia de fuente va a depender del resistor de carga, ya que queremos que al conectarla, la fuente real tenga un valor que se aproxime al de la fuente ideal.
+Los esquemas se muestran a continuación:
+
+\begin{multicols}{2}
+    \begin{center}
+        \def\svgwidth{0.9\linewidth}
+        \input{./images/fuente-de-tension-modelo-1.pdf_tex}
+    \end{center}
+    \begin{center}
+        \def\svgwidth{0.9\linewidth}
+        \input{./images/fuente-de-tension-modelo-2.pdf_tex}
+    \end{center}
+\end{multicols}
+
+Nótese que la corriente $(I)$ no va a variar cuando se analiza el circuito para la fuente ideal con respecto del circuito para la fuente real, por tratarse de conexiones en serie:
+\begin{equation*}
+    \left\{
+    \begin{aligned}
+        V_F &= V_{R_S} + V_{R_L} = I \inParentheses{R_S + R_L}
+        \\
+        V_S &= V_{R_L} = I \, R_L
+    \end{aligned}
+    \right.
+\end{equation*}
+
+Al comparar la tensión de salida $(V_S)$ con la tensión $(V_F)$ que tendría la fuente ideal, se pueden sacar conclusiones de cómo deberá ser $R_L$ con respecto de $R_S$, para que $V_S$ se aproxime a $V_F$.
+\begin{equation*}
+    \frac{V_S}{V_F} = \frac{I \, R_L}{I \inParentheses{R_S + R_L}} = \frac{R_L}{R_S + R_L}
+\end{equation*}
+
+Por lo tanto, $V_S \to V_F$ cuando $R_S / R_L \to 0$.
+Entonces, para que el modelo de fuente real sea una buena aproximación, se tiene que cumplir que $R_L >> R_S$.
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/fuente-de-tension-modelo-5.pdf_tex}
+\end{center}
+
+
+\subsection{Modelo $A$ de fuente de corriente}
+
+Una fuente de corriente es un elemento teórico que no existe en la realidad de manera natural.
+Pero como la tensión es proporcional a la corriente existen fuentes de tensión que funcionan como fuentes de corrientes, bajo ciertas consideraciones.
+
+En la situación anterior, la disminución de tensión en una fuente real va a ser proporcional a una disminución de corriente.
+Con este criterio, para simular una fuente de corriente real se puede usar el circuito anterior.
+Los esquemas se muestran a continuación:
+
+\begin{multicols}{2}
+    \begin{center}
+        \def\svgwidth{0.9\linewidth}
+        \input{./images/fuente-de-tension-modelo-1.pdf_tex}
+    \end{center}
+    \begin{center}
+        \def\svgwidth{0.9\linewidth}
+        \input{./images/fuente-de-tension-modelo-4.pdf_tex}
+    \end{center}
+\end{multicols}
+
+Nótese que, si bien se trata de conexiones en serie, estamos suponiendo que la corriente va a variar justamente por cómo se comporta el modelo $I_S$ con y sin carga:
+\begin{equation*}
+    \left\{
+    \begin{aligned}
+        I_F &= \frac{V_F}{R_S}
+        \\[1ex]
+        I_S &= \frac{V_F}{R_S + R_L}
+    \end{aligned}
+    \right.
+\end{equation*}
+
+Con el fin de usar este circuito como fuente de corriente, al comparar la corriente de salida $(I_S)$ que entregaría la fuente con la que efectivamente pasa por la fuente ideal $(I_F)$, se tiene que:
+\begin{equation*}
+    \frac{I_S}{I_F} = \frac{R_S}{R_S + R_L}
+\end{equation*}
+
+Es decir, que $I_S \to I_F$ cuando $R_L/R_S \to 0$.
+Por lo tanto, para que el modelo de fuente de corriente real sea una buena aproximación, se tiene que cumplir que $R_L<<R_S$.
+
+\begin{center}
+    \def\svgwidth{0.6\linewidth}
+    \input{./images/fuente-de-tension-modelo-6.pdf_tex}
+\end{center}
+
+
+\subsection{Modelo $B$ de fuente de corriente}
+
+Otra forma de simular la disminución de corriente que generaría conectar un resistor de carga a una fuente ideal, es considerar una resistencia de fuente en paralelo a una fuente ideal.
+
+La notación con el tilde es simplemente para diferenciar los elementos de este modelo con los del anterior, que no tienen tilde.
+
+El esquema se muestra a continuación:
+
+\begin{multicols}{2}
+    \begin{center}
+        \def\svgwidth{0.9\linewidth}
+        \input{./images/fuente-de-tension-modelo-3.pdf_tex}
+    \end{center}
+    \begin{center}
+        \def\svgwidth{0.9\linewidth}
+        \input{./images/fuente-de-tension-modelo-4.pdf_tex}
+    \end{center}
+\end{multicols}
+
+En este caso, ambos resistores tendrían la tensión $V_F$ de la fuente ideal.
+La corriente de salida $I_S'$ ahora incluiría el recorrido en paralelo.
+Pero como se ve a continuación, se sigue cumpliendo que $R_L$ tiene que ser chica con respecto de $R_F$.
+La corriente de salida $I_S'$ coincide con la corriente $I_S$ de la fuente del modelo anterior:
+\begin{gather*}
+    \left\{
+    \begin{aligned}
+        I_F' &= \frac{V_F'}{\frac{R_S \, R_L}{R_S + R_L}}
+        \\[1ex]
+        I_S' &= \frac{V_F'}{R_L}
+    \end{aligned}
+    \right.
+    \\[1em]
+    V_F' = \frac{I_F' \, R_S \, R_L}{R_S + R_L}
+    \\[1em]
+    I_S' = \frac{I_F' \, R_S}{R_S + R_L} = \frac{V_F}{R_S + R_L} = I_S
+\end{gather*}
+
+De esta manera, concluimos que teóricamente es posible reemplazar una fuente de corriente real con su resistencia de fuente en paralelo por una fuente de tensión real con su resistencia de fuente en serie.
+
+
+\section{Divisor de tensión}
+
+Al conectar $(\nth)$ resistores en serie a una fuente de tensión, se tiene lo que se conoce como divisor de tensión.
+Esta configuración permite vizualizar la caida de tensión de algún resistor mediante una fórmula.
+
+\begin{center}
+    \def\svgwidth{0.5\linewidth}
+    \input{./images/divisor-de-tension.pdf_tex}
+\end{center}
+
+La corriente para cualquier elemento de un circuto en serie y perticulamente para la fuente de tensión está dada por:
+\begin{equation*}
+    I = \frac{V_S}{\sum_\ith^\nth R_\ith}
+\end{equation*}
+
+Entonces, la caida de tensión de cualquiera de los resistores está dada por:
+\begin{equation*}
+    V_{R_\ith} = I \, R_\ith = V_S \, \frac{R_\ith}{\sum_\ith^\nth R_\ith}
+\end{equation*}
+
+O bien, si $\nth=2$ se tiene:
+\begin{equation*}
+    \left\{
+    \begin{aligned}
+        V_{R_1} &= V_S \, \frac{R_1}{R_1 + R_2}
+        \\[1ex]
+        V_{R_2} &= V_S \, \frac{R_2}{R_1 + R_2}
+    \end{aligned}
+    \right.
+\end{equation*}
+
+
+\section{Divisor de corriente}
+
+Al conectar $(\nth)$ resistores en paralelo a una fuente de corriente, se tiene lo que se conoce como divisor de corriente.
+Esta configuración permite vizualizar la corriente que pasa por algún resistor mediante una fórmula.
+
+\begin{center}
+    \def\svgwidth{0.5\linewidth}
+    \input{./images/divisor-de-corriente.pdf_tex}
+\end{center}
+
+La resistencia equivalente $(R_e)$ en paralelo es:
+\begin{equation*}
+    \sub{R}{eq} = \frac{1}{\sum_\ith^\nth \frac{1}{R_\ith}}
+\end{equation*}
+
+La tensión para cualquier elemento de un circuito en paralelo y particularmente para la fuente de corriente está dada por:
+\begin{equation*}
+    V_S = I_S \, \sub{R}{eq}
+\end{equation*}
+
+La corriente que pase por algún resistor es:
+\begin{equation*}
+    I_\ith = \frac{V_S}{R_\ith} = \frac{I_S \, \sub{R}{eq}}{R_\ith}
+\end{equation*}
+
+
+\section{Superposición}
+
+El método de superposición calcula la corriente $I_\kth$ que pasa por cada uno de los $\kth$ resistores de un circuito con $\Nth$ fuentes, ya sean de tensión o de corriente.
+
+Primero, hay que plantear tantos circuitos como fuentes haya en el circuito original, pasivando $\Nth-1$ Fuentes en cada una de las $\Nth$ situaciones.
+
+Cada uno de los $\Nth$ circuitos planteados va a tener una sola fuente activa y el resto pasivada.
+En cada una de estas situaciones, se deja activa una fuente distinta.
+
+\begin{itemize}
+    \item Para pasivar una fuente de tensión, se la reemplaza por un cable:
+    \begin{equation*}
+        V_S = 0 \iff R_S \to 0
+    \end{equation*}
+
+    \item Para pasivar una fuente de corriente se la desconecta, y se deja esa rama del circuito abierta:
+    \begin{equation*}
+        I_S = 0 \iff R_S \to \infty
+    \end{equation*}
+\end{itemize}
+
+Para cada uno de los $\kth$ resistores, se calcula la corriente $I_{\kth_\nth}$ que pasa en cada uno de los $\Nth$ circuitos.
+Sumando las $\Nth$ corrientes de los diferentes circuitos que pasan para cierto resistor, se obtiene la corriente neta que pasa por el resistor $\kth$-ésimo:
+\begin{equation*}
+    I_\kth = \sum_\nth^\Nth I_{\kth_\nth} = I_{\kth_3} + I_{\kth_2} + \dots + I_{\kth_\Nth}
+\end{equation*}
+
+Donde $I_{\kth_3} + I_{\kth_2} + \dots + I_{\kth_\Nth}$ son las corrientes de cada circuito $\nth$ que pasan por un mismo resistor $\kth$.
+
+
+\section{Equivalente de Thevenin}
+
+El teorema de Thevenin sirve para diseñar un circuito compuesto por una fuente $\sub{V}{Th}$ y una resistencia $\sub{R}{Th}$ que tengan un comportamiento equivalente al de un circuito original más intrincado.
+
+\begin{itemize}
+\item Para calcular $\sub{V}{Th}$ hay que sacar $R_L$ y calcular la tensión a circuito abierto.
+\item Para medir $\sub{V}{Th}$ hay que sacar $R_L$ y medir la tensión a circuito abierto.
+\item Para calcular $\sub{R}{Th}$ hay que sacar $R_L$, pasivar todas las fuentes del circuito original y calcular la resistencia equivalente.
+\item Para medir $\sub{R}{Th}$ hay que sacar $R_L$ y en su lugar colocar una resistencia variable $R_{POT}$ que genere una caida de tensión de $\sfrac{\sub{V}{Th}}{2}$.
+Al plantear el circuito de Thevenin, se tiene un divisor resistivo entre $\sub{R}{Th}$ y $R_{POT}$, a partir del cual se calcula $\sub{R}{Th}$.
+\end{itemize}
+
+
+\section{Potencia}
+
+La potencia es la velocidad a la que los componentes de un circuito realizan trabajo.
+Para un resistor, la potencia es la cantidad de energía eléctrica por segundo que puede disipar en modo de calor:
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \cusTi{Potencia}
+    \begin{equation*}
+        P = \frac{W}{\Delta t}
+    \end{equation*}
+\end{mdframed}
+
+Pudiendo definir el consumo de energía electrica en \si{\kilo\watt\hour} como $W = P \Delta t$.
+
+Por definición de potencial eléctrico $W = q \, V$, luego:
+\begin{equation*}
+    P = \frac{q \, V}{\Delta t}
+\end{equation*}
+
+Observar en la ecuación anterior que cargas $q$ por unidad de tiempo $\Delta t$ es intensidad de corriente, quedando la potencia definida como sigue.
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \cusTi{Potencia}
+    \begin{equation*}
+        P = I \, V
+    \end{equation*}
+\end{mdframed}
+
+Y aplicando la ley de Ohm, se obtienen las siguientes definiciones equivalentes entre si.
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    \begin{equation*}
+        P = I \, V = \frac{V^2}{R} = I^2 \, R
+    \end{equation*}
+\end{mdframed}
+
+Dado que $P = I \, V$ tanto para la resistencia interna $R_S$ de un modelo de fuente real como para la resistencia equivalente de Thevenin $\sub{R}{Th}$, la fuente del circuito equivalente va a transferirle la máxima potencia a la resistencia de carga $(R_L)$ cuando $R_L=\sub{R}{Th}$.
+Por ser un divisor resistivo de resistencias iguales, se tiene:
+\begin{gather*}
+    V_L = \frac{\sub{V}{Th}}{2}
+    \\
+    V_L^2 = \frac{\sub{V}{Th}^2}{4}
+\end{gather*}
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{prop}
+    \end{prop}
+    \begin{equation*}
+        \sub{P}{max} = \frac{V_L^2}{\sub{R}{Th}} = \frac{\sub{V}{Th}^2}{4 \, \sub{R}{Th}}
+    \end{equation*}
+\end{mdframed}

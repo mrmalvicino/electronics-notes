@@ -1,0 +1,107 @@
+\chapter{Transitorios}
+
+\renewcommand{\iu}{\hspace{0.5mm}\mathrm{j}\mkern1mu}
+\renewcommand{\voltage}{\scale{1.2}{v}}
+\renewcommand{\current}{\scale{1.2}{i}}
+
+\section{Transitorios R-C}
+
+Los circuitos R-C son aquellos formados solamente por resistencias y capacitores.
+La etapa en que un circuito R-C se estabiliza hasta tener una corriente contínua y constante se llama transitoria.
+
+\begin{center}
+    \def\svgwidth{0.5\linewidth}
+    \input{./images/transitorios-capacitor-circuito.pdf_tex}
+\end{center}
+
+Inicialmente, el capacitor comienza a cargarce.
+Mientras no haya tanto amontonamiento de cargas, una placa del capacitor puede recibir electrones y la otra puede sederlos.
+Por esto, el circuito se comporta como si hubiese corriente contínua.
+Al principio, la corriente es máxima y luego va decayendo.
+Mientras que la tensión en el capacitor va a ir creciendo conforme pase el tiempo, hasta igualar la tensión en fuente.
+Este comportamiento es representado por la siguiente ecuación diferencial.
+\begin{equation*}
+    \current_C(t) = C \, \frac{\dif}{\dif t} \voltage_C(t)
+\end{equation*}
+
+Cuya solución es para la corriente
+\begin{equation*}
+    \current_C(t) = \frac{V_S}{R} \, e^{-\tfrac{t}{\tau}}
+\end{equation*}
+
+\begin{center}
+    \def\svgwidth{0.8\linewidth}
+    \input{./images/transitorios-capacitor-graph-1.pdf_tex}
+\end{center}
+
+Por ley de Kirchhoff la tensión es
+\begin{equation*}
+    \voltage_C(t) = V_S - \voltage_R(t) = V_S - R \, \current(t)
+\end{equation*}
+
+Y ya que $\current(t) = \current_C(t)$ se obtiene
+\begin{equation*}
+    \voltage_C(t) = V_S - V_S \, e^{-\tfrac{t}{\tau}}
+\end{equation*}
+
+\begin{center}
+    \def\svgwidth{0.8\linewidth}
+    \input{./images/transitorios-capacitor-graph-2.pdf_tex}
+\end{center}
+
+De manera general, si el capacitor tiene una tensión inicial $(V_0)$, la expresión que modela la tensión es:
+
+\begin{equation*}
+    \voltage_C(t) = V_1 - \inParentheses{V_1 - V_0} e^{-\tfrac{t}{\tau}}
+\end{equation*}
+
+Donde la tensión final es $V_1 = V_S$ para la etapa de carga y $V_1 = 0$ para la etapa de descarga.
+
+Si la resistencia $(R)$ o la capacidad $(C)$ son grandes, el tiempo $(\tau)$ de cargado del capacitor tiene que ser mayor.
+Cuando $t = 5 \, \tau$ el capacitor tiene el $99\%$ de la tensión de la fuente, por lo que se considera cargado.
+Cada $\tau$ segundos la corriente disminuye aproximadamente el $33\%$.
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \begin{equation*}
+        \tau = R \, C
+    \end{equation*}
+\end{mdframed}
+
+En el circuito dado, el capacitor está obligado a estar o bien cargandose conectado a la fuente o bien descargandose.
+La llave del interruptor cambia con una frecuencia constante.
+Si $\tau$ es lo suficientemente chico, dará tiempo al capacitor de cargarse y descargarse mucho antes que la llave se vuelva a cambiar, y el gráfico de la tensión tendrá forma cuadrada, de lo contrario triangular.
+
+\begin{center}
+    \def\svgwidth{\linewidth}
+    \input{./images/transitorios-capacitor.pdf_tex}
+\end{center}
+
+
+\section{Transitorios R-L}
+
+Al contrario que en un circuito R-C, en la bobina de un circuito R-L, al principio la corriente es mínima y la tensión máxima.
+\begin{equation*}
+    \voltage_L(t) = L \, \frac{\dif}{\dif t} \current_L(t)
+\end{equation*}
+
+La corriente en una bobina se comporta como la tensión en un capacitor:
+\begin{equation*}
+    \current_L(t) = I_1 - \inParentheses{I_1 - I_0} e^{-\tfrac{t}{\tau}}
+\end{equation*}
+
+Y la tensión como la corriente:
+\begin{equation*}
+    \voltage_L(t) = V_S \, e^{-\tfrac{t}{\tau}}
+\end{equation*}
+
+Quedando la constante de tiempo definida como sigue.
+
+\begin{mdframed}[style=MyFrame1]
+    \begin{defn}
+    \end{defn}
+    \begin{equation*}
+        \tau = \frac{L}{R}
+    \end{equation*}
+\end{mdframed}
