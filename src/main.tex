@@ -57,7 +57,11 @@ La versión digital más reciente de este texto puede ser descargada gratuitamen
 
 \section{Fuerza eléctrica}
 
-Según el modelo atómico, la materia está formada por moléculas que están compuestas en última instancia por átomos. Pero a su vez, los átomos están formados por distintas configuraciones de \emph{partículas subatómicas}, de ahí que haya distintos tipos de elementos. Cada elemento se clasifica en la tabla periódica según su número atómico, que es la cantidad de protones que tiene un átomo de dicho elemento. Un átomo tiene la misma cantidad de protones que de neutrones, pero no necesariamente la misma cantidad de electrones. Podemos identificar así el peso de un átomo de cierto elemento, conociendo la cantidad de partículas subatómicas, según el siguiente cuadro, donde además se observa la carga eléctrica de cada una.
+Según el modelo atómico, la materia está formada por moléculas que están compuestas en última instancia por átomos.
+Pero a su vez, los átomos están formados por distintas configuraciones de \emph{partículas subatómicas}, de ahí que haya distintos tipos de elementos.
+Cada elemento se clasifica en la tabla periódica según su número atómico, que es la cantidad de protones que tiene un átomo de dicho elemento.
+Un átomo tiene la misma cantidad de protones que de neutrones, pero no necesariamente la misma cantidad de electrones.
+Podemos identificar así el peso de un átomo de cierto elemento, conociendo la cantidad de partículas subatómicas, según el siguiente cuadro, donde además se observa la carga eléctrica de cada una.
 
 \begin{table}[h!]
     \begin{center}
@@ -76,9 +80,13 @@ Según el modelo atómico, la materia está formada por moléculas que están co
     \end{center}
 \end{table}
 
-La cantidad de protones (y neutrones) de un átomo permanece inalterada. Una transformación física que modificase la \emph{estructura atómica} implicaría un cambio en el núcleo del átomo haciendo que el elemento no sea el mismo. Estas transformaciones se conocen como fusión y fisión nuclear.
+La cantidad de protones (y neutrones) de un átomo permanece inalterada.
+Una transformación física que modificase la \emph{estructura atómica} implicaría un cambio en el núcleo del átomo haciendo que el elemento no sea el mismo.
+Estas transformaciones se conocen como fusión y fisión nuclear.
 
-En cambio, la cantidad de electrones de un átomo sí puede variar sin alterar la naturaleza del elemento. Si un átomo tiene la misma cantidad de protones que de electrones se lo llama neutro. De lo contrario, se lo llama ion, o se dice que está cargado eléctricamente.
+En cambio, la cantidad de electrones de un átomo sí puede variar sin alterar la naturaleza del elemento.
+Si un átomo tiene la misma cantidad de protones que de electrones se lo llama neutro.
+De lo contrario, se lo llama ion, o se dice que está cargado eléctricamente.
 
 \concept{Aislantes (o dieléctricos) y conductores:}
 
@@ -104,7 +112,7 @@ Esto genera que, mientras el objeto externo cargado esté presente, una mitad de
 Si el objeto externo con carga se quita, los electrones del conductor se reacomodan para devolverle su carga neutra, ya que las cargas polarizadas son del signo contrario y se atraen entre sí.
 
 \begin{itemize}
-    \item \concept{Carga por conducción}
+    \item \textbf{Carga por conducción}
     
     \begin{itemize}
         \item El vidrio pierde electrones al ser frotado con seda.
@@ -113,7 +121,7 @@ Si el objeto externo con carga se quita, los electrones del conductor se reacomo
         \item Se dice que la goma queda cargada negativamente por tener más electrones que protones.
     \end{itemize}
 
-    \item \concept{Carga por inducción}
+    \item \textbf{Carga por inducción}
     
     \begin{itemize}
         \item Se acerca un objeto cargado a uno neutro que está conectado a tierra.
@@ -160,7 +168,8 @@ Según el principio de superposición, el campo eléctrico generado por $\nth$ c
 
 Ahora bien, el campo eléctrico generado por una carga contínua se define a partir del diferencial $\dif q$ que determina la distribución geométrica de la carga.
 
-Según esté la carga dispuesta en una, dos o tres dimensiones se tendrá una densidad de carga lineal, superficial o volumétrica respectivamente. Por lo tanto $\dif q$ será, en cada caso:
+Según esté la carga dispuesta en una, dos o tres dimensiones se tendrá una densidad de carga lineal, superficial o volumétrica respectivamente.
+Por lo tanto $\dif q$ será, en cada caso:
 \begin{align*}
     \dif q &= \lambda \, \dif x
     \\[1ex]
@@ -178,12 +187,14 @@ Y si la carga está distribuída uniformemente, la densidad de carga es igual a 
     \rho &= \frac{Q}{V}
 \end{align*}
 
-Se consideran particiones que van a tener cierta carga $\Delta q_\ith$ y se las trata como puntuales. Sumando el aporte de cada $\Delta q$ se obtiene una aproximación del campo eléctrico debido a la carga total:
+Se consideran particiones que van a tener cierta carga $\Delta q_\ith$ y se las trata como puntuales.
+Sumando el aporte de cada $\Delta q$ se obtiene una aproximación del campo eléctrico debido a la carga total:
 \begin{equation*}
     \Vec{E} \approx \cstcoulomb \sum_{\ith=1}^\nth \frac{\Delta q_\ith}{r_\ith^2} \, \versor{r}_\ith
 \end{equation*}
 
-Luego, tomar el límite cuando $\nth\to\infty$ en la ecuación anterior equivale a hacer infinito el número de particiones. De esta forma, el aporte de cada trozo de carga será $\Delta q_\ith = \dif q$ pudiendo definir:
+Luego, tomar el límite cuando $\nth\to\infty$ en la ecuación anterior equivale a hacer infinito el número de particiones.
+De esta forma, el aporte de cada trozo de carga será $\Delta q_\ith = \dif q$ pudiendo definir:
 
 \begin{mdframed}[style=MyFrame1]
     \begin{defn}
@@ -205,7 +216,8 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
     \end{example}
     \cusTi{Campo eléctrico de una barra}
     \begin{formatI}
-        Calcular el campo eléctrico en el punto $\vec{x}_0$ generado por una barra aislante con densidad de carga lineal uniforme. Suponer que la barra tiene grosor nulo.
+        Calcular el campo eléctrico en el punto $\vec{x}_0$ generado por una barra aislante con densidad de carga lineal uniforme.
+        Suponer que la barra tiene grosor nulo.
     \end{formatI}
 
     \begin{center}
@@ -215,7 +227,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Observar que $r$ varía linealmente a medida que se recorre la barra.
     \begin{equation*}
-        \vec{E} = \cstcoulomb \int_{d}^{d+l} \frac{\lambda \, \dif x}{x^2} \bb{- \iVer}
+        \vec{E} = \cstcoulomb \int_{d}^{d+l} \frac{\lambda \, \dif x}{x^2} \inParentheses{- \iVer}
     \end{equation*}
 \end{mdframed}
 
@@ -224,7 +236,8 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
     \end{example}
     \cusTi{Campo eléctrico de un anillo}
     \begin{formatI}
-        Calcular el campo eléctrico en el punto $\vec{x}_0$ generado por un anillo aislante con densidad de carga lineal uniforme. Suponer que el anillo tiene grosor nulo.
+        Calcular el campo eléctrico en el punto $\vec{x}_0$ generado por un anillo aislante con densidad de carga lineal uniforme.
+        Suponer que el anillo tiene grosor nulo.
     \end{formatI}
 
     \begin{center}
@@ -245,7 +258,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
             \\
             & r = \sqrt{D^2 + R_0^2}
             \\
-            & \versor{r} = \nnorm{\versor{r}} \sqb{\cos(\theta) \, \iVer + \sin(\theta) \, \jVer}
+            & \versor{r} = \nnorm{\versor{r}} \inBrackets{\cos(\theta) \, \iVer + \sin(\theta) \, \jVer}
         \end{aligned}
         \right.
     \end{equation*}
@@ -257,7 +270,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Obteniendo
     \begin{equation*}
-        \vec{E} = \frac{\cstcoulomb \, D \, Q}{\bb{D^2 + R_0^2}^{\frac{3}{2}}} \, \iVer
+        \vec{E} = \frac{\cstcoulomb \, D \, Q}{\inParentheses{D^2 + R_0^2}^{\frac{3}{2}}} \, \iVer
     \end{equation*}
 \end{mdframed}
 
@@ -281,11 +294,11 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Cambiando a coordenadas polares:
     \begin{gather*}
-        \fx{T}{R,\phi} = (y,z) = \sqb{R \cos(\phi) &,& R \sin(\phi)}
+        \fx{T}{R,\phi} = (y,z) = \inBrackets{R \cos(\phi) &,& R \sin(\phi)}
         \\
-        \det \bb{\fx{J}{T}} = \cos(\phi) \, R \cos(\phi) - \sin(\phi) \bb{-R \sin(\phi)}
+        \det \inParentheses{\fx{J}{T}} = \cos(\phi) \, R \cos(\phi) - \sin(\phi) \inParentheses{-R \sin(\phi)}
         \\
-        \det \bb{\fx{J}{T}} = R \implies
+        \det \inParentheses{\fx{J}{T}} = R \implies
         \\
         \dif A = R \, \dif \phi \, \dif R
     \end{gather*}
@@ -301,7 +314,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
         \begin{aligned}
             & r = \sqrt{D^2 + R^2}
             \\
-            & \versor{r} = \nnorm{\versor{r}} \sqb{\cos(\theta) \, \iVer + \sin(\theta) \, \jVer}
+            & \versor{r} = \nnorm{\versor{r}} \inBrackets{\cos(\theta) \, \iVer + \sin(\theta) \, \jVer}
         \end{aligned}
         \right.
     \end{equation*}
@@ -313,11 +326,11 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
     
     Reemplazando $\versor{r}$ y $r$ nuevamente se obtiene:
     \begin{align*}
-        \vec{E} &= \cstcoulomb \, \sigma \, D \iint \frac{R \, \dif \phi \, \dif R}{\bb{D^2 + R^2}^{\frac{3}{2}}} \, \iVer
+        \vec{E} &= \cstcoulomb \, \sigma \, D \iint \frac{R \, \dif \phi \, \dif R}{\inParentheses{D^2 + R^2}^{\frac{3}{2}}} \, \iVer
         \\[1ex]
-        &= \cstcoulomb \, \sigma \, D \int_0^{2\pi} \dif \phi \, \int_0^{R_0} \frac{R \, \dif R}{\bb{D^2 + R^2}^{\frac{3}{2}}} \, \iVer
+        &= \cstcoulomb \, \sigma \, D \int_0^{2\pi} \dif \phi \, \int_0^{R_0} \frac{R \, \dif R}{\inParentheses{D^2 + R^2}^{\frac{3}{2}}} \, \iVer
         \\[1ex]
-        &= 2 \, \pi \, \cstcoulomb \, \sigma \, D \int_0^{R_0} \frac{R \, \dif R}{\bb{D^2 + R^2}^{\frac{3}{2}}} \, \iVer
+        &= 2 \, \pi \, \cstcoulomb \, \sigma \, D \int_0^{R_0} \frac{R \, \dif R}{\inParentheses{D^2 + R^2}^{\frac{3}{2}}} \, \iVer
     \end{align*}
 \end{mdframed}
 
@@ -337,7 +350,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
     Es posible hacer el mismo razonamiento para el disco y hacer tender el radio a infinito.
     Considerando $R_0 \to \infty$ en el resultado obtenido anteriormente:
     \begin{equation*}
-        \vec{E} = 2 \, \pi \, \cstcoulomb \, \sigma \, D \int_0^\infty \frac{R \, \dif R}{\bb{D^2 + R^2}^{\frac{3}{2}}} \, \iVer
+        \vec{E} = 2 \, \pi \, \cstcoulomb \, \sigma \, D \int_0^\infty \frac{R \, \dif R}{\inParentheses{D^2 + R^2}^{\frac{3}{2}}} \, \iVer
     \end{equation*}
     Sea $u = D^2 + R^2$ tal que si $R \to \infty \implies u \to \infty$ y
     \begin{equation*}
@@ -368,7 +381,8 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
     \end{example}
     \cusTi{Campo eléctrico de un cilindro}
     \begin{formatI}
-        Calcular el campo eléctrico en el punto $\vec{x}_0$ generado por un cilindro aislante con densidad de carga superficial uniforme. Considerar el caso en que el cilindro es hueco y el caso en que es sólido.
+        Calcular el campo eléctrico en el punto $\vec{x}_0$ generado por un cilindro aislante con densidad de carga superficial uniforme.
+        Considerar el caso en que el cilindro es hueco y el caso en que es sólido.
     \end{formatI}
     \begin{center}
         \def\svgwidth{\linewidth}
@@ -397,7 +411,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Y la distancia $r$ es
     \begin{equation*}
-        r = \sqrt{R_0^2 + \bb{L+D-x}^2}
+        r = \sqrt{R_0^2 + \inParentheses{L+D-x}^2}
     \end{equation*}
 
     Con lo cual, la integral de campo eléctrico queda
@@ -406,7 +420,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
         \\[1em]
         &= \cstcoulomb \, \sigma \, R_0 \iint \frac{L+D-x}{r^3} \dif \phi \, \dif x \, \iVer
         \\[1em]
-        &= 2 \, \pi \, \cstcoulomb \, \sigma \, R_0 \int_0^L \frac{L+D-x}{\sqb{R_0^2 + \bb{L+D-x}^2}^{\frac{3}{2}}} \dif x \, \iVer
+        &= 2 \, \pi \, \cstcoulomb \, \sigma \, R_0 \int_0^L \frac{L+D-x}{\inBrackets{R_0^2 + \inParentheses{L+D-x}^2}^{\frac{3}{2}}} \dif x \, \iVer
     \end{align*}
 
     \concept{Caso de cilindro sólido:}
@@ -425,7 +439,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Y la distancia $r$ es
     \begin{equation*}
-        r = \sqrt{R_0^2 + \bb{L+D-x}^2}
+        r = \sqrt{R_0^2 + \inParentheses{L+D-x}^2}
     \end{equation*}
 
     Con lo cual, la integral de campo eléctrico queda
@@ -434,7 +448,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
         \\[1em]
         &= \pi \, \cstcoulomb \, \rho \, R_0^2 \int \frac{L+D-x}{r^3} \dif x \, \iVer
         \\[1em]
-        &= \pi \, \cstcoulomb \, \rho \, R_0^2 \int_0^L \frac{L+D-x}{\sqb{R_0^2 + \bb{L+D-x}^2}^{\frac{3}{2}}} \dif x \, \iVer
+        &= \pi \, \cstcoulomb \, \rho \, R_0^2 \int_0^L \frac{L+D-x}{\inBrackets{R_0^2 + \inParentheses{L+D-x}^2}^{\frac{3}{2}}} \dif x \, \iVer
     \end{align*}
 \end{mdframed}
 
@@ -443,7 +457,8 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
     \end{example}
     \cusTi{Campo eléctrico de un cono}
     \begin{formatI}
-        Calcular el campo eléctrico en el punto $\vec{x}_0$ generado por un cono aislante con densidad de carga superficial uniforme. Considerar el caso en que el cono es hueco y el caso en que es sólido.
+        Calcular el campo eléctrico en el punto $\vec{x}_0$ generado por un cono aislante con densidad de carga superficial uniforme.
+        Considerar el caso en que el cono es hueco y el caso en que es sólido.
     \end{formatI}
 
     \begin{center}
@@ -473,7 +488,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Y la distancia $r$ es
     \begin{equation*}
-        r = \sqrt{\bb{D-x}^2 + \sqb{\fx{R}{x}}^2}
+        r = \sqrt{\inParentheses{D-x}^2 + \inBrackets{\fx{R}{x}}^2}
     \end{equation*}
 
     Al tratarse de la pendiente de la recta del cono en corte $y=0$, el radio varía según
@@ -483,17 +498,17 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Con lo cual, la integral de campo eléctrico queda
     \begin{align*}
-        \vec{E} &= \cstcoulomb \iint \frac{\sigma \, \fx{R}{x} \, \dif \phi \, \dif x}{\bb{D-x}^2 + \sqb{\fx{R}{x}}^2} \, \frac{D-x}{r} \, \iVer
+        \vec{E} &= \cstcoulomb \iint \frac{\sigma \, \fx{R}{x} \, \dif \phi \, \dif x}{\inParentheses{D-x}^2 + \inBrackets{\fx{R}{x}}^2} \, \frac{D-x}{r} \, \iVer
         \\[1em]
-        &= \cstcoulomb \, \sigma \, \frac{R_0}{L} \iint \frac{x \bb{D-x}}{\sqb{\bb{D-x}^2 + \bb{\frac{R_0}{L} \, x}^2}^{\frac{3}{2}}} \, \dif \phi \, \dif x \, \iVer
+        &= \cstcoulomb \, \sigma \, \frac{R_0}{L} \iint \frac{x \inParentheses{D-x}}{\inBrackets{\inParentheses{D-x}^2 + \inParentheses{\frac{R_0}{L} \, x}^2}^{\frac{3}{2}}} \, \dif \phi \, \dif x \, \iVer
         \\[1em]
-        &= 2 \, \pi \, \cstcoulomb \, \sigma \, \frac{R_0}{L} \int_0^L \frac{x \bb{D-x}}{\sqb{\bb{D-x}^2 + \bb{\frac{R_0}{L} \, x}^2}^{\frac{3}{2}}} \, \dif x \, \iVer
+        &= 2 \, \pi \, \cstcoulomb \, \sigma \, \frac{R_0}{L} \int_0^L \frac{x \inParentheses{D-x}}{\inBrackets{\inParentheses{D-x}^2 + \inParentheses{\frac{R_0}{L} \, x}^2}^{\frac{3}{2}}} \, \dif x \, \iVer
     \end{align*}
 
     \concept{Caso de cono sólido:}
 
     \begin{equation*}
-        \dif q = \rho \, \dif V = \rho \, \pi \, \sqb{\fx{R}{x}}^2 \, \dif x
+        \dif q = \rho \, \dif V = \rho \, \pi \, \inBrackets{\fx{R}{x}}^2 \, \dif x
     \end{equation*}
 
     Por simetría axial el versor director es
@@ -504,7 +519,7 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Y la distancia $r$ es
     \begin{equation*}
-        r = \sqrt{\bb{D-x}^2 + \sqb{\fx{R}{x}}^2}
+        r = \sqrt{\inParentheses{D-x}^2 + \inBrackets{\fx{R}{x}}^2}
     \end{equation*}
 
     Al tratarse de la pendiente de la recta del cono en corte $y=0$, el radio varía según
@@ -514,11 +529,11 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
     Con lo cual, la integral de campo eléctrico queda
     \begin{align*}
-        \vec{E} &= \cstcoulomb \int \frac{\rho \, \pi \, \sqb{\fx{R}{x}}^2 \, \dif x}{r^2} \, \frac{D-x}{r} \, \iVer
+        \vec{E} &= \cstcoulomb \int \frac{\rho \, \pi \, \inBrackets{\fx{R}{x}}^2 \, \dif x}{r^2} \, \frac{D-x}{r} \, \iVer
         \\[1em]
-        &= \pi \, \cstcoulomb \, \rho \int \frac{\sqb{\fx{R}{x}}^2 \bb{D-x}}{r^3} \, \dif x \, \iVer
+        &= \pi \, \cstcoulomb \, \rho \int \frac{\inBrackets{\fx{R}{x}}^2 \inParentheses{D-x}}{r^3} \, \dif x \, \iVer
         \\[1em]
-        &= \pi \, \cstcoulomb \, \rho \bb{\frac{R_0}{L}}^2 \int_0^L \frac{x^2 \bb{D-x}}{\sqb{\bb{D-x}^2 + \bb{\frac{R_0}{L} \, x}^2}^{\frac{3}{2}}} \, \dif x \, \iVer
+        &= \pi \, \cstcoulomb \, \rho \inParentheses{\frac{R_0}{L}}^2 \int_0^L \frac{x^2 \inParentheses{D-x}}{\inBrackets{\inParentheses{D-x}^2 + \inParentheses{\frac{R_0}{L} \, x}^2}^{\frac{3}{2}}} \, \dif x \, \iVer
     \end{align*}
 \end{mdframed}
 
@@ -527,10 +542,11 @@ Si bien la definición es siempre válida, la integral solo se puede computar en
 
 El flujo eléctrico ($\Phi$) de una carga eléctrica encerrada por una superficie ($S$) está dado por el campo eléctrico ($\Vec{E}$) según
 \begin{equation*}
-    \Phi = \iint_S \Vec{E} \cdot \dif \Vec{S} = \iint \Vec{E} \bb{\Vec{s}(u,v)} \versor{n} \, \dif S
+    \Phi = \iint_S \Vec{E} \cdot \dif \Vec{S} = \iint \Vec{E} \inParentheses{\Vec{s}(u,v)} \versor{n} \, \dif S
 \end{equation*}
 
-La Ley de Gauss establece que el flujo no depende de la ubicación de la carga dentro de una superficie cerrada. Esto se debe a que el campo eléctrico es inversamente proporcional a la distancia mientras que el área es directamente proporcional.
+La Ley de Gauss establece que el flujo no depende de la ubicación de la carga dentro de una superficie cerrada
+Esto se debe a que el campo eléctrico es inversamente proporcional a la distancia mientras que el área es directamente proporcional.
 Así, podemos reducir cualquier caso de estudio a una superficie esférica con la carga ubicada en el centro:
 \begin{equation*}
     \Phi = E \, A = \frac{\cstcoulomb \, \sub{q}{in}}{r^2} \, 4 \, \pi \, r^2 = 4 \, \pi \, \cstcoulomb \, \sub{q}{in} = \frac{\sub{q}{in}}{\epsilon_0}
@@ -582,7 +598,7 @@ Si el campo eléctrico tiene magnitud $E$ constante y dirección normal a una su
     \begin{equation*}
         \left\{
         \begin{aligned}
-            \Phi &= E \, \sub{A}{tot} = E \bb{A_1+A_2} = 2 \, E \, A
+            \Phi &= E \, \sub{A}{tot} = E \inParentheses{A_1+A_2} = 2 \, E \, A
             \\
             \Phi &= \frac{\sub{q}{in}}{\epsilon_0} = \frac{\sigma \, A}{\epsilon_0}
         \end{aligned}
@@ -790,12 +806,12 @@ La primera implica una integral de tipo 2 para el trabajo, mientras que la segun
     \end{center}
     En el punto $\vec{x}_1$ el potencial es:
     \begin{equation*}
-        \Delta \voltage = \cstcoulomb \bb{\frac{q_1}{\sqrt{R^2 + y_0^2}} + \frac{q_2}{\sqrt{R^2 + y_0^2}}} = 0
+        \Delta \voltage = \cstcoulomb \inParentheses{\frac{q_1}{\sqrt{R^2 + y_0^2}} + \frac{q_2}{\sqrt{R^2 + y_0^2}}} = 0
     \end{equation*}
 
     En el punto $\vec{x}_2$ el potencial es:
     \begin{equation*}
-        \Delta \voltage = \cstcoulomb \bb{\frac{q_1}{x_0 + R} + \frac{q_2}{x_0 - R}}
+        \Delta \voltage = \cstcoulomb \inParentheses{\frac{q_1}{x_0 + R} + \frac{q_2}{x_0 - R}}
     \end{equation*}
 \end{mdframed}
 
@@ -884,7 +900,7 @@ La primera implica una integral de tipo 2 para el trabajo, mientras que la segun
     \begin{align*}
         \Delta \voltage &= \cstcoulomb \, \sigma \, \int_0^{2\pi} \dif \phi \int_0^{R_0} \frac{R}{\sqrt{D^2+R^2}} \, \dif R
         \\[1ex]
-        &= 2 \, \pi \, \cstcoulomb \, \sigma \bb{\sqrt{R_0^2 + D^2} - D}
+        &= 2 \, \pi \, \cstcoulomb \, \sigma \inParentheses{\sqrt{R_0^2 + D^2} - D}
     \end{align*}
 \end{mdframed}
 
@@ -911,7 +927,8 @@ Lo cual implica $\Vec{E} = - \grad \voltage$ que en una dimensión es:
     E(x) = - \frac{\dif}{\dif x} \voltage(x)
 \end{equation*}
 
-La siguiente imagen representa una esfera conductora con carga positiva. Se observa que a medida que aumenta la distancia $(r)$, el campo $(E)$ disminuye.
+La siguiente imagen representa una esfera conductora con carga positiva.
+Se observa que a medida que aumenta la distancia $(r)$, el campo $(E)$ disminuye.
 La gráfica de $\voltage(r)$ es decreciente, y siempre tiene pendiente negativa.
 La pendiente de $\voltage(r)$ es la derivada con respecto a la distancia que, por definición, es el campo eléctrico.
 
@@ -926,7 +943,8 @@ Además, se puede observar que si la distancia es $-R < r < R$, el potencial el�
 
 \section{Capacitancia}
 
-Un recipiente con un volumen $(V)$ mayor va a tener más capacidad de almacenar gas. Esto va a tener ciertas implicancias sobre la masa $(m)$ y la presión $(P)$.
+Un recipiente con un volumen $(V)$ mayor va a tener más capacidad de almacenar gas.
+Esto va a tener ciertas implicancias sobre la masa $(m)$ y la presión $(P)$.
 \begin{equation*}
     V_1 > V_2 \Rightarrow
     \left\{
@@ -993,19 +1011,19 @@ La capacitancia o capacidad eléctrica es la cantidad de carga $(q)$ por unidad 
         \\[1ex]
         &= \int_{r_1}^{r_2} \frac{\cstcoulomb \, q}{r^2} \dif r
         \\
-        &= \cstcoulomb \, q \bb{\frac{1}{r_1} - \frac{1}{r_2}}
+        &= \cstcoulomb \, q \inParentheses{\frac{1}{r_1} - \frac{1}{r_2}}
     \end{align*}
 
     Así:
     \begin{align*}
         C &= \frac{q}{\Delta \voltage}
         \\
-        &= \frac{1}{\cstcoulomb \bb{\frac{1}{r_1} - \frac{1}{r_2}}}
+        &= \frac{1}{\cstcoulomb \inParentheses{\frac{1}{r_1} - \frac{1}{r_2}}}
     \end{align*}
 
     Obteniendo, para dos esferas concéntricas
     \begin{equation*}
-        C = \frac{r_1 \, r_2}{\cstcoulomb \bb{r_2 - r_1}}
+        C = \frac{r_1 \, r_2}{\cstcoulomb \inParentheses{r_2 - r_1}}
     \end{equation*}
 
     O bien, si $r_2 \to \infty$, se tiene para una única esfera
@@ -1032,7 +1050,7 @@ Para calcular la energía almacenada en un capacitor se hace:
     \end{prop}
     \cusTi{Energía almacenada en un capacitor}
     \begin{equation*}
-        \sub{E}{pot} = \frac{C \bb{\Delta \voltage}^2}{2}
+        \sub{E}{pot} = \frac{C \inParentheses{\Delta \voltage}^2}{2}
     \end{equation*}
 \end{mdframed}
 
@@ -1051,7 +1069,7 @@ Para calcular la energía almacenada en un capacitor se hace:
     \end{equation*}
     obteniendo
     \begin{equation*}
-        \sub{E}{pot} = \tfrac{1}{2} \, \tfrac{\epsilon_0 \, A}{\Delta x} \bb{E \, \Delta x}^2
+        \sub{E}{pot} = \tfrac{1}{2} \, \tfrac{\epsilon_0 \, A}{\Delta x} \inParentheses{E \, \Delta x}^2
     \end{equation*}
     y si $V_0 = A \, \Delta x$ es el volumen se tiene
     \begin{equation*}
@@ -1059,12 +1077,15 @@ Para calcular la energía almacenada en un capacitor se hace:
     \end{equation*}
 \end{mdframed}
 
-El campo eléctrico máximo que se puede dar en un capacitor está dado por la resistencia dieléctrica. Si la magnitud del campo es mayor que esta, esto es, entonces el dieléctrico pasa a ser conductor. Por lo tanto, para un dieléctrico se cumple:
+El campo eléctrico máximo que se puede dar en un capacitor está dado por la resistencia dieléctrica.
+Si la magnitud del campo es mayor que esta, esto es, entonces el dieléctrico pasa a ser conductor.
+Por lo tanto, para un dieléctrico se cumple:
 \begin{equation*}
     E < \epsilon
 \end{equation*}
 
-La capacitancia está definida para el vacío. Si entre los conductores de un capacitor en vez de vacío hay un material dieléctrico, la tensión va a estar dada por
+La capacitancia está definida para el vacío.
+Si entre los conductores de un capacitor en vez de vacío hay un material dieléctrico, la tensión va a estar dada por
 \begin{equation*}
     \Delta \voltage = \frac{\Delta V_0}{k}
 \end{equation*}
@@ -1096,15 +1117,19 @@ Alessandro Volta inventó la pila de corriente continua colocando un electrolito
 
 \section{Ley de Ohm}
 
-Los conductores ideales no oponen resistencia alguna al flujo de corriente. Los buenos conductores practicamente no se oponen al paso de corriente, como el oro o el cobre. Los malos conductores hacen que el flujo de corriente sea lento.
+Los conductores ideales no oponen resistencia alguna al flujo de corriente.
+Los buenos conductores practicamente no se oponen al paso de corriente, como el oro o el cobre.
+Los malos conductores hacen que el flujo de corriente sea lento.
 
-Cuanto más largo sea un mal conductor, más resistencia opondrá al paso de corriente. Cuanto más ancho sea, las cargas tendrán más lugar para fluir:
+Cuanto más largo sea un mal conductor, más resistencia opondrá al paso de corriente.
+Cuanto más ancho sea, las cargas tendrán más lugar para fluir:
 
 \begin{equation*}
     \text{Resistencia} \equiv \frac{\text{Resistividad} \times \text{Distancia}}{\text{Area}}
 \end{equation*}
 
-Georg Simon Ohm demostró experimentalmente la proporción con la que, para distintos tipos de conductores, una misma tensión genera distintos flujos de corriente. Pero indistintamente del material y topología del conductor, para cada uno se verifica que la relación entre diferentes tensiones con las respectivas corrientes que se generan es constante:
+Georg Simon Ohm demostró experimentalmente la proporción con la que, para distintos tipos de conductores, una misma tensión genera distintos flujos de corriente.
+Pero indistintamente del material y topología del conductor, para cada uno se verifica que la relación entre diferentes tensiones con las respectivas corrientes que se generan es constante:
 
 \begin{mdframed}[style=MyFrame1]
     \begin{defn}
@@ -1188,7 +1213,7 @@ Georg Simon Ohm demostró experimentalmente la proporción con la que, para dist
     \end{aligned}
     \right.
     \\[1ex]
-    \sub{R}{eq} = \frac{V \, \Delta t}{q} = \frac{\bb{V_1 + V_2} \Delta t}{q} = \frac{\bb{I \, R_1 + I \, R_2}}{I} = R_1 + R_2
+    \sub{R}{eq} = \frac{V \, \Delta t}{q} = \frac{\inParentheses{V_1 + V_2} \Delta t}{q} = \frac{\inParentheses{I \, R_1 + I \, R_2}}{I} = R_1 + R_2
 \end{gather*}
 
 \begin{mdframed}[style=MyFrame1]
@@ -1238,7 +1263,8 @@ Las fuentes reales generan una tensión, pero al conectarlas con una resistencia
 Para simular el efecto de disminución del potencial que generaría conectar un resistor de carga $(R_L)$ a una fuente ideal $(V_F)$, se puede incluir un resistor en serie, llamado resistencia de fuente $(R_S)$.
 El modelo de fuente real $(V_S)$ es el conjunto de la fuente ideal y la resistencia de fuente.
 
-La resistencia de fuente va a depender del resistor de carga, ya que queremos que al conectarla, la fuente real tenga un valor que se aproxime al de la fuente ideal. Los esquemas se muestran a continuación:
+La resistencia de fuente va a depender del resistor de carga, ya que queremos que al conectarla, la fuente real tenga un valor que se aproxime al de la fuente ideal.
+Los esquemas se muestran a continuación:
 
 \begin{multicols}{2}
     \begin{center}
@@ -1255,7 +1281,7 @@ Nótese que la corriente $(I)$ no va a variar cuando se analiza el circuito para
 \begin{equation*}
     \left\{
     \begin{aligned}
-        V_F &= V_{R_S} + V_{R_L} = I \bb{R_S + R_L}
+        V_F &= V_{R_S} + V_{R_L} = I \inParentheses{R_S + R_L}
         \\
         V_S &= V_{R_L} = I \, R_L
     \end{aligned}
@@ -1264,10 +1290,11 @@ Nótese que la corriente $(I)$ no va a variar cuando se analiza el circuito para
 
 Al comparar la tensión de salida $(V_S)$ con la tensión $(V_F)$ que tendría la fuente ideal, se pueden sacar conclusiones de cómo deberá ser $R_L$ con respecto de $R_S$, para que $V_S$ se aproxime a $V_F$.
 \begin{equation*}
-    \frac{V_S}{V_F} = \frac{I \, R_L}{I \bb{R_S + R_L}} = \frac{R_L}{R_S + R_L}
+    \frac{V_S}{V_F} = \frac{I \, R_L}{I \inParentheses{R_S + R_L}} = \frac{R_L}{R_S + R_L}
 \end{equation*}
 
-Por lo tanto, $V_S \to V_F$ cuando $R_S / R_L \to 0$. Entonces, para que el modelo de fuente real sea una buena aproximación, se tiene que cumplir que $R_L >> R_S$.
+Por lo tanto, $V_S \to V_F$ cuando $R_S / R_L \to 0$.
+Entonces, para que el modelo de fuente real sea una buena aproximación, se tiene que cumplir que $R_L >> R_S$.
 
 \begin{center}
     \def\svgwidth{0.6\linewidth}
@@ -1277,7 +1304,8 @@ Por lo tanto, $V_S \to V_F$ cuando $R_S / R_L \to 0$. Entonces, para que el mode
 
 \subsection{Modelo $A$ de fuente de corriente}
 
-Una fuente de corriente es un elemento teórico que no existe en la realidad de manera natural. Pero como la tensión es proporcional a la corriente existen fuentes de tensión que funcionan como fuentes de corrientes, bajo ciertas consideraciones.
+Una fuente de corriente es un elemento teórico que no existe en la realidad de manera natural.
+Pero como la tensión es proporcional a la corriente existen fuentes de tensión que funcionan como fuentes de corrientes, bajo ciertas consideraciones.
 
 En la situación anterior, la disminución de tensión en una fuente real va a ser proporcional a una disminución de corriente.
 Con este criterio, para simular una fuente de corriente real se puede usar el circuito anterior.
@@ -1310,7 +1338,8 @@ Con el fin de usar este circuito como fuente de corriente, al comparar la corrie
     \frac{I_S}{I_F} = \frac{R_S}{R_S + R_L}
 \end{equation*}
 
-Es decir, que $I_S \to I_F$ cuando $R_L/R_S \to 0$. Por lo tanto, para que el modelo de fuente de corriente real sea una buena aproximación, se tiene que cumplir que $R_L<<R_S$.
+Es decir, que $I_S \to I_F$ cuando $R_L/R_S \to 0$.
+Por lo tanto, para que el modelo de fuente de corriente real sea una buena aproximación, se tiene que cumplir que $R_L<<R_S$.
 
 \begin{center}
     \def\svgwidth{0.6\linewidth}
@@ -1360,7 +1389,8 @@ De esta manera, concluimos que teóricamente es posible reemplazar una fuente de
 
 \section{Divisor de tensión}
 
-Al conectar $(\nth)$ resistores en serie a una fuente de tensión, se tiene lo que se conoce como divisor de tensión. Esta configuración permite vizualizar la caida de tensión de algún resistor mediante una fórmula.
+Al conectar $(\nth)$ resistores en serie a una fuente de tensión, se tiene lo que se conoce como divisor de tensión.
+Esta configuración permite vizualizar la caida de tensión de algún resistor mediante una fórmula.
 
 \begin{center}
     \def\svgwidth{0.5\linewidth}
@@ -1391,7 +1421,8 @@ O bien, si $\nth=2$ se tiene:
 
 \section{Divisor de corriente}
 
-Al conectar $(\nth)$ resistores en paralelo a una fuente de corriente, se tiene lo que se conoce como divisor de corriente. Esta configuración permite vizualizar la corriente que pasa por algún resistor mediante una fórmula.
+Al conectar $(\nth)$ resistores en paralelo a una fuente de corriente, se tiene lo que se conoce como divisor de corriente.
+Esta configuración permite vizualizar la corriente que pasa por algún resistor mediante una fórmula.
 
 \begin{center}
     \def\svgwidth{0.5\linewidth}
@@ -1420,7 +1451,8 @@ El método de superposición calcula la corriente $I_\kth$ que pasa por cada uno
 
 Primero, hay que plantear tantos circuitos como fuentes haya en el circuito original, pasivando $\Nth-1$ Fuentes en cada una de las $\Nth$ situaciones.
 
-Cada uno de los $\Nth$ circuitos planteados va a tener una sola fuente activa y el resto pasivada. En cada una de estas situaciones, se deja activa una fuente distinta.
+Cada uno de los $\Nth$ circuitos planteados va a tener una sola fuente activa y el resto pasivada.
+En cada una de estas situaciones, se deja activa una fuente distinta.
 
 \begin{itemize}
     \item Para pasivar una fuente de tensión, se la reemplaza por un cable:
@@ -1434,7 +1466,8 @@ Cada uno de los $\Nth$ circuitos planteados va a tener una sola fuente activa y 
     \end{equation*}
 \end{itemize}
 
-Para cada uno de los $\kth$ resistores, se calcula la corriente $I_{\kth_\nth}$ que pasa en cada uno de los $\Nth$ circuitos. Sumando las $\Nth$ corrientes de los diferentes circuitos que pasan para cierto resistor, se obtiene la corriente neta que pasa por el resistor $\kth$-ésimo:
+Para cada uno de los $\kth$ resistores, se calcula la corriente $I_{\kth_\nth}$ que pasa en cada uno de los $\Nth$ circuitos.
+Sumando las $\Nth$ corrientes de los diferentes circuitos que pasan para cierto resistor, se obtiene la corriente neta que pasa por el resistor $\kth$-ésimo:
 \begin{equation*}
     I_\kth = \sum_\nth^\Nth I_{\kth_\nth} = I_{\kth_3} + I_{\kth_2} + \dots + I_{\kth_\Nth}
 \end{equation*}
@@ -1450,13 +1483,15 @@ El teorema de Thevenin sirve para diseñar un circuito compuesto por una fuente 
 \item Para calcular $\sub{V}{Th}$ hay que sacar $R_L$ y calcular la tensión a circuito abierto.
 \item Para medir $\sub{V}{Th}$ hay que sacar $R_L$ y medir la tensión a circuito abierto.
 \item Para calcular $\sub{R}{Th}$ hay que sacar $R_L$, pasivar todas las fuentes del circuito original y calcular la resistencia equivalente.
-\item Para medir $\sub{R}{Th}$ hay que sacar $R_L$ y en su lugar colocar una resistencia variable $R_{POT}$ que genere una caida de tensión de $\sfrac{\sub{V}{Th}}{2}$. Al plantear el circuito de Thevenin, se tiene un divisor resistivo entre $\sub{R}{Th}$ y $R_{POT}$, a partir del cual se calcula $\sub{R}{Th}$.
+\item Para medir $\sub{R}{Th}$ hay que sacar $R_L$ y en su lugar colocar una resistencia variable $R_{POT}$ que genere una caida de tensión de $\sfrac{\sub{V}{Th}}{2}$.
+Al plantear el circuito de Thevenin, se tiene un divisor resistivo entre $\sub{R}{Th}$ y $R_{POT}$, a partir del cual se calcula $\sub{R}{Th}$.
 \end{itemize}
 
 
 \section{Potencia}
 
-La potencia es la velocidad a la que los componentes de un circuito realizan trabajo. Para un resistor, la potencia es la cantidad de energía eléctrica por segundo que puede disipar en modo de calor:
+La potencia es la velocidad a la que los componentes de un circuito realizan trabajo.
+Para un resistor, la potencia es la cantidad de energía eléctrica por segundo que puede disipar en modo de calor:
 
 \begin{mdframed}[style=MyFrame1]
     \begin{defn}
@@ -1495,7 +1530,8 @@ Y aplicando la ley de Ohm, se obtienen las siguientes definiciones equivalentes 
     \end{equation*}
 \end{mdframed}
 
-Dado que $P = I \, V$ tanto para la resistencia interna $R_S$ de un modelo de fuente real como para la resistencia equivalente de Thevenin $\sub{R}{Th}$, la fuente del circuito equivalente va a transferirle la máxima potencia a la resistencia de carga $(R_L)$ cuando $R_L=\sub{R}{Th}$. Por ser un divisor resistivo de resistencias iguales, se tiene:
+Dado que $P = I \, V$ tanto para la resistencia interna $R_S$ de un modelo de fuente real como para la resistencia equivalente de Thevenin $\sub{R}{Th}$, la fuente del circuito equivalente va a transferirle la máxima potencia a la resistencia de carga $(R_L)$ cuando $R_L=\sub{R}{Th}$.
+Por ser un divisor resistivo de resistencias iguales, se tiene:
 \begin{gather*}
     V_L = \frac{\sub{V}{Th}}{2}
     \\
@@ -1566,12 +1602,14 @@ Y ya que $\current(t) = \current_C(t)$ se obtiene
 De manera general, si el capacitor tiene una tensión inicial $(V_0)$, la expresión que modela la tensión es:
 
 \begin{equation*}
-    \voltage_C(t) = V_1 - \bb{V_1 - V_0} e^{-\tfrac{t}{\tau}}
+    \voltage_C(t) = V_1 - \inParentheses{V_1 - V_0} e^{-\tfrac{t}{\tau}}
 \end{equation*}
 
 Donde la tensión final es $V_1 = V_S$ para la etapa de carga y $V_1 = 0$ para la etapa de descarga.
 
-Si la resistencia $(R)$ o la capacidad $(C)$ son grandes, el tiempo $(\tau)$ de cargado del capacitor tiene que ser mayor. Cuando $t = 5 \, \tau$ el capacitor tiene el $99\%$ de la tensión de la fuente, por lo que se considera cargado. Cada $\tau$ segundos la corriente disminuye aproximadamente el $33\%$.
+Si la resistencia $(R)$ o la capacidad $(C)$ son grandes, el tiempo $(\tau)$ de cargado del capacitor tiene que ser mayor.
+Cuando $t = 5 \, \tau$ el capacitor tiene el $99\%$ de la tensión de la fuente, por lo que se considera cargado.
+Cada $\tau$ segundos la corriente disminuye aproximadamente el $33\%$.
 
 \begin{mdframed}[style=MyFrame1]
     \begin{defn}
@@ -1600,7 +1638,7 @@ Al contrario que en un circuito R-C, en la bobina de un circuito R-L, al princip
 
 La corriente en una bobina se comporta como la tensión en un capacitor:
 \begin{equation*}
-    \current_L(t) = I_1 - \bb{I_1 - I_0} e^{-\tfrac{t}{\tau}}
+    \current_L(t) = I_1 - \inParentheses{I_1 - I_0} e^{-\tfrac{t}{\tau}}
 \end{equation*}
 
 Y la tensión como la corriente:
@@ -1704,15 +1742,15 @@ La impedancia ($\impedance$) engloba la resistencia ($R$), la reactancia capacit
     \end{defn}
     \cusTi{Impedancia}
     \begin{equation*}
-        \impedance = R + \iu \bb{X_L - X_C}
+        \impedance = R + \iu \inParentheses{X_L - X_C}
     \end{equation*}
 \end{mdframed}
 
 De manera que la Ley de Ohm se sigue cumpliendo, teniendo en cuenta que la impedancia es una división entre fasores complejos.
 \begin{equation*}
     \impedance = \frac{\voltage}{\current}
-    = \frac{V \, e^{\iu \bb{\omega \, t + \phi_\voltage}}}{I \, e^{\iu \bb{\omega \, t + \phi_\current}}}
-    = \frac{V}{I} \, e^{\iu \bb{\phi_\voltage - \phi_\current}}
+    = \frac{V \, e^{\iu \inParentheses{\omega \, t + \phi_\voltage}}}{I \, e^{\iu \inParentheses{\omega \, t + \phi_\current}}}
+    = \frac{V}{I} \, e^{\iu \inParentheses{\phi_\voltage - \phi_\current}}
     = \frac{V}{I} \, e^{\iu \, \phi_\impedance}
     = Z \, e^{\iu \, \phi_\impedance}
 \end{equation*}
@@ -1755,13 +1793,13 @@ Donde:
 \begin{align*}
     \sub{Z}{eq} &= \sqrt{R^2 + X_C^2}
     \\
-    \phi_{\sub{\impedance}{eq}} &= \arctan{\bb{\dfrac{-X_C}{R}}}
+    \phi_{\sub{\impedance}{eq}} &= \arctan{\inParentheses{\dfrac{-X_C}{R}}}
 \end{align*}
 
 \begin{align*}
     \current &= \frac{\voltage_s}{\sub{\impedance}{eq}}
     \\
-    &= \frac{V_s}{\sub{Z}{eq}} \, e^{\iu \bb{\ang{0} - \phi_{\sub{\impedance}{eq}}}}
+    &= \frac{V_s}{\sub{Z}{eq}} \, e^{\iu \inParentheses{\ang{0} - \phi_{\sub{\impedance}{eq}}}}
 \end{align*}
 
 Donde:
@@ -1781,13 +1819,15 @@ Donde:
 \begin{align*}
     V_C &= \frac{V_s \, X_C}{\sqrt{R^2 + X_C^2}}
     \\
-    \phi_{\voltage_C} &= \phi_\current + \phi_{\impedance_C} = - \arctan{\bb{\dfrac{-X_C}{R} }} - \ang{90}
+    \phi_{\voltage_C} &= \phi_\current + \phi_{\impedance_C} = - \arctan{\inParentheses{\dfrac{-X_C}{R} }} - \ang{90}
 \end{align*}
 
 
 \section{Potencia}
 
-La potencia en AC es similar a la definida para DC. La diferencia es que en alterna, la tensión y la corriente son funciones del tiempo. De manera que la potencia también lo es.
+La potencia en AC es similar a la definida para DC.
+La diferencia es que en alterna, la tensión y la corriente son funciones del tiempo.
+De manera que la potencia también lo es.
 
 \begin{mdframed}[style=MyFrame1]
     \begin{defn}
@@ -1798,19 +1838,22 @@ La potencia en AC es similar a la definida para DC. La diferencia es que en alte
     \end{equation*}
 \end{mdframed}
 
-La tensión y la corriente son ondas senoidales de igual frecuencia, pero que pueden estár defasadas entre sí. Sea $\varphi$ el defasaje entre $\fx{\current}{t}$ y $\fx{\voltage}{t}$ podemos expresar la potencia como
+La tensión y la corriente son ondas senoidales de igual frecuencia, pero que pueden estár defasadas entre sí.
+Sea $\varphi$ el defasaje entre $\fx{\current}{t}$ y $\fx{\voltage}{t}$ podemos expresar la potencia como
 \begin{align*}
     \fx{p}{t} &= I \, \sin (\omega \, t) \, V \, \sin (\omega \, t + \varphi)
     \\[1ex]
-    &= V \, I \, \cos (\varphi) \sqb{1 - \cos(2 \, \omega \, t)} + V \, I \, \sin (\varphi) \sin (2 \, \omega \, t)
+    &= V \, I \, \cos (\varphi) \inBrackets{1 - \cos(2 \, \omega \, t)} + V \, I \, \sin (\varphi) \sin (2 \, \omega \, t)
 \end{align*}
 
 
 \section{Filtros}
 
-Al aumentar la frecuencia de la corriente en un circuito R-C, el capacitor tiene menos tiempo de cargado por ciclo. Por más que la intensidad de corriente máxima sea la misma, la tensión máxima va a ser menor.
+Al aumentar la frecuencia de la corriente en un circuito R-C, el capacitor tiene menos tiempo de cargado por ciclo.
+Por más que la intensidad de corriente máxima sea la misma, la tensión máxima va a ser menor.
 
-Un filtro es un divisor de tensión que tiene una rama \emph{en serie} y otra \emph{en paralelo} o \emph{en derivación}. En cada rama puede tener uno o más componentes, que pueden ser resistores, capacitores o inductores dependiendo la aplicación:
+Un filtro es un divisor de tensión que tiene una rama \emph{en serie} y otra \emph{en paralelo} o \emph{en derivación}.
+En cada rama puede tener uno o más componentes, que pueden ser resistores, capacitores o inductores dependiendo la aplicación:
 
 \begin{center}
     \def\svgwidth{0.6\linewidth}
@@ -1829,7 +1872,8 @@ El siguiente gráfico muestra las curvas de impedancia de un resistor $(R)$, un 
 
 \subsection{Filtros R-C}
 
-El siguiente es un filtro R-C pasa altos. Invirtiendo la disposición de los componentes, se tiene un filtro R-C pasa bajos.
+El siguiente es un filtro R-C pasa altos.
+Invirtiendo la disposición de los componentes, se tiene un filtro R-C pasa bajos.
 
 \begin{center}
     \def\svgwidth{0.6\linewidth}
@@ -1863,7 +1907,7 @@ La frecuencia de resonancia verifica $Z_R = Z_C$ o bien $R = \frac{1}{\omega_0 \
 
 Y la función de transferencia
 \begin{equation*}
-    H = \frac{1}{1 - \iu \, \tfrac{\omega_0}{\omega}} = \frac{1}{\sqrt{1 +  \bb{\tfrac{\omega_0}{\omega}}^2}} \, e^{\iu \artan \bb{\tfrac{\omega_0}{\omega}}}
+    H = \frac{1}{1 - \iu \, \tfrac{\omega_0}{\omega}} = \frac{1}{\sqrt{1 +  \inParentheses{\tfrac{\omega_0}{\omega}}^2}} \, e^{\iu \artan \inParentheses{\tfrac{\omega_0}{\omega}}}
 \end{equation*}
 
 De manera que si $\omega = \omega_0$ el circuito está en resonancia y
@@ -1873,18 +1917,18 @@ De manera que si $\omega = \omega_0$ el circuito está en resonancia y
 
 Que en decibeles es
 \begin{align*}
-    L_H &= 20 \, \log \bb{\frac{\sub{V}{out}}{\sub{V}{in}}}
+    L_H &= 20 \, \log \inParentheses{\frac{\sub{V}{out}}{\sub{V}{in}}}
     \\[1ex]
-    &= -20 \, \log \sqrt{1 + \bb{\frac{\omega_0}{\omega}}^2}
+    &= -20 \, \log \sqrt{1 + \inParentheses{\frac{\omega_0}{\omega}}^2}
     \\[1ex]
-    &= -10 \, \log \sqb{1 + \bb{\frac{\omega_0}{\omega}}^2}
+    &= -10 \, \log \inBrackets{1 + \inParentheses{\frac{\omega_0}{\omega}}^2}
 \end{align*}
 
 Ahora bien, es posible hacer una aproximación que tenga una caída de $6 \, \si{\deci \bel}$ por octava, sabiendo que la atenuación real en la frecuencia de resonancia va a ser de $3 \, \si{\deci \bel}$.
 
-Esto es, considerando $f << f_0$ se tiene que $1 << \bb{\tfrac{\omega_0}{\omega}}^2$ y se obtendría para la función de transferencia
+Esto es, considerando $f << f_0$ se tiene que $1 << \inParentheses{\tfrac{\omega_0}{\omega}}^2$ y se obtendría para la función de transferencia
 \begin{equation*}
-    L_H \approx 20 \, \log \bb{\frac{\omega}{\omega_0}}
+    L_H \approx 20 \, \log \inParentheses{\frac{\omega}{\omega_0}}
 \end{equation*}
 
 Pudiendo comparar ambas respuestas en frecuencia en el siguiente gráfico
@@ -1897,7 +1941,8 @@ Pudiendo comparar ambas respuestas en frecuencia en el siguiente gráfico
 
 \subsection{Filtros R-L}
 
-El siguiente es un filtro R-L pasa bajos. Invirtiendo la disposición de los componentes, se tiene un filtro R-L pasa altos.
+El siguiente es un filtro R-L pasa bajos.
+Invirtiendo la disposición de los componentes, se tiene un filtro R-L pasa altos.
 \begin{equation*}
     R = X_L \Rightarrow f_c = \frac{R}{2 \, \pi \, L}
 \end{equation*}
@@ -1910,7 +1955,8 @@ El siguiente es un filtro R-L pasa bajos. Invirtiendo la disposición de los com
 
 \subsection{Filtros L-C}
 
-El siguiente es un filtro L-C pasa bajos. Invirtiendo la disposición de los componentes, se tiene un filtro L-C pasa altos.
+El siguiente es un filtro L-C pasa bajos.
+Invirtiendo la disposición de los componentes, se tiene un filtro L-C pasa altos.
 \begin{equation*}
     X_C = X_L \Rightarrow f_c = \dfrac{1}{2 \, \pi \, \sqrt{L \, C}}
 \end{equation*}
@@ -1923,7 +1969,8 @@ El siguiente es un filtro L-C pasa bajos. Invirtiendo la disposición de los com
 
 \subsection{Filtro pasa banda}
 
-El siguiente es un filtro pasa banda. Invirtiendo la disposición de los componentes, se tiene un filtro rechaza banda.
+El siguiente es un filtro pasa banda.
+Invirtiendo la disposición de los componentes, se tiene un filtro rechaza banda.
 \begin{align*}
     \norm{\impedance_R} &= \norm{\impedance_C + \impedance_L}
     \\
@@ -1949,14 +1996,17 @@ La pendiente es proporcional a la resistencia:
 
 El transformador sirve para aumentar o disminuir la tensión y la corriente de una fuente AC.
 
-Está formado por dos bobinas, a lo largo de las cuales hay un material que permite el flujo magnético. Cuando circula corriente por una de las bobinas, se genera un campo magnético que es detectado por la segunda bobina, y genera un campo independiente del anterior. Este va a generar una corriente análoga a la de entrada, pero cuya tensión $(V)$ e intensidad $(I)$ va a depender de la cantidad de vueltas que ambas bobinas tengan.
+Está formado por dos bobinas, a lo largo de las cuales hay un material que permite el flujo magnético.
+Cuando circula corriente por una de las bobinas, se genera un campo magnético que es detectado por la segunda bobina, y genera un campo independiente del anterior.
+Este va a generar una corriente análoga a la de entrada, pero cuya tensión $(V)$ e intensidad $(I)$ va a depender de la cantidad de vueltas que ambas bobinas tengan.
 
 \begin{center}
     \def\svgwidth{\linewidth}
     \input{./images/transformador.pdf_tex}
 \end{center}
 
-La función del transformador es, como se mencionó anteriormente, modificar la tensión, lo cual va a afectar la corriente. Por la ley del transformador ideal, lo que permanece constante es la potencia:
+La función del transformador es, como se mencionó anteriormente, modificar la tensión, lo cual va a afectar la corriente.
+Por la ley del transformador ideal, lo que permanece constante es la potencia:
 \begin{equation*}
     V_0 \, I_0 = V_1 \, I_1
 \end{equation*}
@@ -1966,7 +2016,9 @@ La función del transformador es, como se mencionó anteriormente, modificar la 
     \end{example}
     \cusTi{Lámpara EUR-USA}
     \begin{formatI}
-        Con frecuencia se suelen usar transformadores para conectar un dispositivo que esté diseñado para ser usado con la tensión que se usa en el país de procedencia del dispositivo. En Argentina y Europa en general, se utiliza $\SI{220}{\volt}$ y en Estados Unidos $\SI{110}{\volt}$. Verificar que una lámpara de $\SI{55}{\watt}$ de Argentina no va a ser igual que una lámpara de $\SI{55}{\watt}$ de Estados unidos, pero ambas van alumbrar con la misma potencia.
+        Con frecuencia se suelen usar transformadores para conectar un dispositivo que esté diseñado para ser usado con la tensión que se usa en el país de procedencia del dispositivo.
+        En Argentina y Europa en general, se utiliza $\SI{220}{\volt}$ y en Estados Unidos $\SI{110}{\volt}$.
+        Verificar que una lámpara de $\SI{55}{\watt}$ de Argentina no va a ser igual que una lámpara de $\SI{55}{\watt}$ de Estados unidos, pero ambas van alumbrar con la misma potencia.
     \end{formatI}
     
     Planteando $P = V \, I$ para cada país, se tiene:
@@ -1987,14 +2039,21 @@ La función del transformador es, como se mencionó anteriormente, modificar la 
 
 \section{Fuente AC/DC}
 
-Supongamos que se tiene un tanque al que, con una frecuencia constante, por momentos se le agrega agua y por momentos se le quita. A partir de esa situación, se quiere instalar una canilla por la que salga una corriente de agua constante. En principio se necesita que el llenado de agua solo sea entrante, evitando que se descargue. Y además, se necesita que haya cierta acumulación de agua en el tanque para que, si abro la canilla más de lo que la entrada está aportando, no baje la presión de manera sustancial. Para convertir una fuente de AC en DC, el procedimiento es similar a la analogía anterior.
+Supongamos que se tiene un tanque al que, con una frecuencia constante, por momentos se le agrega agua y por momentos se le quita.
+A partir de esa situación, se quiere instalar una canilla por la que salga una corriente de agua constante.
+En principio se necesita que el llenado de agua solo sea entrante, evitando que se descargue.
+Y además, se necesita que haya cierta acumulación de agua en el tanque para que, si abro la canilla más de lo que la entrada está aportando, no baje la presión de manera sustancial.
+Para convertir una fuente de AC en DC, el procedimiento es similar a la analogía anterior.
 
 \begin{itemize}
-    \item \concept{Fuente AC:} suministra de elergía eléctrica el dispositivo.
-    \item \concept{Transformador:} adapta la tensión que entrega la red. En el caso de argentina la entrada del transformador sería de $\SI{220}{\volt}$ y la salida depende del equipo en cuestión.
-    \item \concept{Etapa de rectificación:} hace que la corriente tenga solo un sentido. Suelen usarse diodos.
-    \item \concept{Etapa de filtrado:} obtiene una acumulación de cargas para que las cargas que salgan no superen a las que entren cortando el flujo de corriente. Suelen usarse capacitores.
-    \item \concept{Resistencia:} carga equivalente al dispositivo que estamos conectando a la fuente.
+    \item \textbf{Fuente AC:} suministra de elergía eléctrica el dispositivo.
+    \item \textbf{Transformador:} adapta la tensión que entrega la red.
+    En el caso de argentina la entrada del transformador sería de $\SI{220}{\volt}$ y la salida depende del equipo en cuestión.
+    \item \textbf{Etapa de rectificación:} hace que la corriente tenga solo un sentido.
+    Suelen usarse diodos.
+    \item \textbf{Etapa de filtrado:} obtiene una acumulación de cargas para que las cargas que salgan no superen a las que entren cortando el flujo de corriente.
+    Suelen usarse capacitores.
+    \item \textbf{Resistencia:} carga equivalente al dispositivo que estamos conectando a la fuente.
 \end{itemize}
 
 \begin{center}
@@ -2004,7 +2063,8 @@ Supongamos que se tiene un tanque al que, con una frecuencia constante, por mome
 
 \concept{Puente de diodos}
 
-Para hacer la etapa de rectificación más eficiente, se necesitaría aprovechar cuando la corriente cambia de sentido. Es decir, en vez de solo dejar pasar la corriente cuando es positiva, de alguna forma ``cambiar los extremos de los cables'' cuando la fuente alterna cambie de polaridad de manera que la polaridad resultante siempre sea la misma.
+Para hacer la etapa de rectificación más eficiente, se necesitaría aprovechar cuando la corriente cambia de sentido.
+Es decir, en vez de solo dejar pasar la corriente cuando es positiva, de alguna forma ``cambiar los extremos de los cables'' cuando la fuente alterna cambie de polaridad de manera que la polaridad resultante siempre sea la misma.
 
 \begin{center}
     \def\svgwidth{0.6\linewidth}
@@ -2016,7 +2076,8 @@ Para hacer la etapa de rectificación más eficiente, se necesitaría aprovechar
     \input{./images/puente-de-diodos-2.pdf_tex}
 \end{center}
 
-Claro está que realizar este cambio manualmente es imposible. Pero la siguiente configuración, llamada Puente de Diodos cumple la función de hacer la corriente siempre positiva.
+Claro está que realizar este cambio manualmente es imposible.
+Pero la siguiente configuración, llamada Puente de Diodos cumple la función de hacer la corriente siempre positiva.
 
 \begin{center}
     \def\svgwidth{0.6\linewidth}
