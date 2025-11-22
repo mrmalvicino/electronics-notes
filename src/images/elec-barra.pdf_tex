@@ -56,10 +56,10 @@
     \put(0,0){\includegraphics[width=\unitlength,page=1]{elec-barra.pdf}}%
     \put(0.15719181,0.26039484){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}$y$\end{tabular}}}}%
     \put(0.93360946,0.09488676){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}$x$\end{tabular}}}}%
-    \put(0.26026396,0.19999258){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}$d$\end{tabular}}}}%
+    \put(0.26026396,0.19999258){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}$D$\end{tabular}}}}%
     \put(0.15,0.09673944){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}$\vec{E}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{elec-barra.pdf}}%
-    \put(0.58897422,0.19999258){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}$l$\end{tabular}}}}%
+    \put(0.58897422,0.19999258){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}$L$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{elec-barra.pdf}}%
     \put(0.2,0.03){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}$\vec{0}$\end{tabular}}}}%
   \end{picture}%
